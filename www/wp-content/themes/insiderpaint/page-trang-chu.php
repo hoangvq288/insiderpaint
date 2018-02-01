@@ -152,7 +152,6 @@ get_header(); ?>
       </div>
     </div>
   </section>
-  <?php the_field('mo_ta_mau_son_tao_cam_hung'); ?>
   <section class="companyinfo">
     <div class="container">
       <ul class="row">
@@ -166,7 +165,7 @@ get_header(); ?>
               <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_com_1.jpg" alt="">
             </div>
             <p>
-              <?php echo wp_trim_words(get_field('mo_ta_mau_son_tao_cam_hung'), 40, '...'); ?>
+              <?php echo wp_trim_words(get_field('mo_ta_danh_muc_san_pham'), 40, '...'); ?>
             </p>
             <a href="#" class="btn btn-primary">
               Xem Thêm
