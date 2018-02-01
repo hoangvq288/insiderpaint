@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- These meta tags come first. -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title><?php echo get_bloginfo( 'name' ); ?></title>
+      <!-- Include the CSS -->
+      <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,600,700,800" rel="stylesheet">
+      <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/style.css">
+      <link rel="stylesheet" href="<?php echo get_bloginfo('template_directory'); ?>/css/styles.css">
+      <?php wp_head();?>
+   </head>
+   <body>
+   <main>
+    <header class="header">
+      <div class="header__left">
+        <a href="" class="header__leftct">
+          <i class="fa fa-navicon"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-search"></i>
+        </a>
+      </div>
+      <div class="header__center">
+        <h1 class="logo">
+          <a href="<?php echo get_home_url(); ?>">
+            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png" alt="">
+          </a>
+          
+        </h1>
+      </div>
+      <div class="header__right">
+        <a href="">
+          <i class="fa fa-share-alt-square"></i>
+        </a>
+      </div>
+    </header>
