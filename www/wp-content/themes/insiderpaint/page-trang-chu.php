@@ -1,6 +1,6 @@
 <?php
 /**
- * Theme: Flat Bootstrap
+ * Theme: Insider Paint
  * 
  * Template Name: Page - Trang chủ
  *
@@ -117,10 +117,16 @@ get_header(); ?>
                       'value' => true,
                       'compare'   => '!=',
                     ),
+                    'query_one' => array(
+                        'key' => 'order_number',
+                    ),
                   ),
                   'posts_per_page' => '4',
-                  'orderby' => 'date',
-                  'order' => 'DESC'
+                  'orderby' => array( 
+                    'query_one' => 'ASC',
+                    'date' => 'DESC'
+                  ),
+                  
                 ));
                  while ($the_query->have_posts()) {
                        $the_query->the_post();
@@ -165,7 +171,7 @@ get_header(); ?>
               <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_com_1.jpg" alt="">
             </div>
             <p>
-              <?php echo wp_trim_words(get_field('mo_ta_danh_muc_san_pham'), 40, '...'); ?>
+              <?php echo wp_trim_words(get_field('mo_ta_danh_muc_san_pham'), 50, '...'); ?>
             </p>
             <a href="#" class="btn btn-primary">
               Xem Thêm
@@ -180,7 +186,7 @@ get_header(); ?>
               <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_com_2.jpg" alt="">
             </div>
             <p>
-              <?php echo wp_trim_words(get_field('mo_ta_du_an_tieu_bieu'), 40, '...'); ?>
+              <?php echo wp_trim_words(get_field('mo_ta_du_an_tieu_bieu'), 50, '...'); ?>
             </p>
             <a href="#" class="btn btn-primary">
               Xem Thêm
@@ -195,7 +201,7 @@ get_header(); ?>
               <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_com_3.jpg" alt="">
             </div>
             <p>
-              <?php echo wp_trim_words(get_field('mo_ta_mau_son_tao_cam_hung'), 40, '...'); ?>
+              <?php echo wp_trim_words(get_field('mo_ta_mau_son_tao_cam_hung'), 50, '...'); ?>
             </p>
             <a href="#" class="btn btn-primary">
               Xem Thêm

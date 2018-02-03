@@ -34,7 +34,7 @@
         </h1>
       </div>
       <div class="header__right">
-        <a href="">
+        <a href="javascript:;" class="header__rightct">
           <i class="fa fa-share-alt-square"></i>
         </a>
       </div>

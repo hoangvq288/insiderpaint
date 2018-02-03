@@ -1,17 +1,17 @@
  <nav class="nav">
       <ul>
         <li>
-          <a href="javascript:;" class="nav__link">
+          <a href="<?php echo get_home_url(); ?>" class="nav__link">
             Trang Chủ
           </a>
         </li>
         <li>
-          <a href="javascript:;" class="nav__link">
+          <a href="<?php echo get_permalink(get_page_by_path('gioi-thieu')->ID) ?>" class="nav__link">
             Giới thiệu
           </a>
         </li>
         <li>
-          <a href="javascript:;" class="nav__link">
+          <a href="<?php echo get_permalink(get_page_by_path('danh-muc-san-pham')->ID) ?>" class="nav__link">
             Danh Mục Sản Phẩm
           </a>
           <input type="checkbox">
@@ -62,7 +62,7 @@
               </a>
             </li>
             <li>
-              <a href="javascript:;">
+              <a href="<?php echo get_permalink(get_page_by_path('tin-tuc')->ID) ?>" class="nav__link">
                  Tin tức sự kiện
               </a>
             </li>
@@ -129,23 +129,18 @@
     <nav class="nav nav__right">
       <ul>
         <li>
-          <a href="javascript:;" class="nav__link">
-            Trang Chủ
+          <a href="<?php the_field('facebook_url', 'option') ?>" class="nav__link">
+            Facebook
           </a>
         </li>
         <li>
-          <a href="javascript:;" class="nav__link">
-            Giới thiệu
+          <a href="<?php the_field('youtube_url', 'option') ?>" class="nav__link">
+            Youtube
           </a>
         </li>
         <li>
-          <a href="javascript:;" class="nav__link">
-            Danh Mục Sản Phẩm
-          </a>
-        </li>
-        <li>
-          <a href="javascript:;" class="nav__link">
-            Dự Án Tiêu Biểu
+          <a href="<?php the_field('instagram_url', 'option') ?>" class="nav__link"> 
+            Instagram
           </a>
         </li>
       </ul>

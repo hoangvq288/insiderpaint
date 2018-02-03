@@ -20,6 +20,10 @@ function my_show_columns($name) {
 }
 
 
+
+
+
+
 function truncate($string, $limit, $break=".", $pad="...")
 {
   // return with no change if string is shorter than $limit
@@ -259,9 +263,9 @@ if (!function_exists('tintuc_init')) {
            'rewrite' => array('slug' => 'tin-tuc','with_front' => false),
            'capability_type' => 'post',
            'has_archive' => true,
-           'hierarchical' => false,
+           'hierarchical' => true,
            'menu_position' => 30,
-           'supports' => array('title', 'editor', 'author', 'thumbnail')
+           'supports' => array('title', 'editor', 'author', 'thumbnail'),
        );
 
        register_post_type('tin-tuc', $args);
@@ -270,6 +274,34 @@ if (!function_exists('tintuc_init')) {
 }
 add_action( 'init', 'tintuc_init' );
 
+// Add the custom columns to the book post type:
+add_filter( 'manage_tin-tuc_posts_columns', 'set_custom_edit_tin_tuc_columns' );
+function set_custom_edit_tin_tuc_columns($columns) {
+    unset( $columns['author'] );
+    $columns['order_number'] = __( 'Order Number', 'your_text_domain' );
+    return $columns;
+}
+
+// Add the data to the custom columns for the book post type:
+add_action( 'manage_tin-tuc_posts_custom_column' , 'custom_book_column', 10, 2 );
+function custom_book_column( $column, $post_id ) {
+    switch ( $column ) {
+
+        case 'order_number' :
+          echo get_post_meta( $post_id , 'order_number' , true ); 
+          break;
+
+    }
+}
+
+// add custom fields query to WP REST API v2
+// https://1fix.io/blog/2015/07/20/query-vars-wp-api/
+function my_allow_meta_query( $valid_vars ) {
+
+    $valid_vars = array_merge( $valid_vars, array( 'meta_key', 'meta_value' ) );
+    return $valid_vars;
+}
+add_filter( 'rest_query_vars', 'my_allow_meta_query' );
 
 if (!function_exists('tc_bao_chi_init')) {
    /**
