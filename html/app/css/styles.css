@@ -16679,6 +16679,9 @@ footer .sociallink {
     -ms-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease; }
+  .product__list.col-lg-3 .product__des h4 {
+    width: 100%;
+    text-align: center; }
 
 .product__img {
   margin-bottom: 15px; }
@@ -16687,5 +16690,26 @@ footer .sociallink {
     object-position: center;
     object-fit: cover; }
 
+.product__des h4 {
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; }
+
 .product__des p {
   margin-bottom: 0px; }
+
+.tab-inspiration {
+  background: #f5f5f5; }
+  .tab-inspiration ul {
+    display: flex;
+    justify-content: center; }
+    .tab-inspiration ul li.active a {
+      background: #e5bd5e;
+      color: white; }
+    .tab-inspiration ul li a {
+      padding: 30px;
+      display: block;
+      font-size: 16px;
+      color: black; }
+      .tab-inspiration ul li a:hover {
+        background: #d5d5d5; }
