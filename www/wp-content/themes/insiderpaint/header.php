@@ -1,3 +1,8 @@
+
+    
+    
+
+
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -16,12 +21,13 @@
    <body>
    <main>
     <?php get_template_part( 'menu', get_post_format() ); ?>
+    
     <header class="header">
       <div class="header__left">
         <a href="javascript:;" class="header__leftct">
           <i class="fa fa-navicon"></i>
         </a>
-        <a href="javascript:;">
+        <a href="">
           <i class="fa fa-search"></i>
         </a>
       </div>
@@ -30,7 +36,6 @@
           <a href="<?php echo get_home_url(); ?>">
             <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo.png" alt="">
           </a>
-          
         </h1>
       </div>
       <div class="header__right">
