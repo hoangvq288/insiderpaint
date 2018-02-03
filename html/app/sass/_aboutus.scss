@@ -1,0 +1,176 @@
+.banner {
+  position: relative;
+  &__sub{
+    ul{
+      li{
+        img{
+          height: 500px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  .title{
+    position: absolute;
+    top: 50%;
+    display: block;
+    left: 0px;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    color: white;
+    margin-top: -20px;
+  }
+}
+
+.title{
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 28px;
+  &__line{
+    &:before{
+      height: 5px;
+      width: 50px;
+      background: $main-color-primary;
+      content: "";
+      display: block;
+      position: relative;
+      left: 50%;
+      margin-left: -20px;
+      margin-bottom: 20px;
+    }
+    &--left{
+      text-align: left;
+      &:before{
+        left: 0px;
+        margin-left: 0px;
+      }
+    }
+  }
+}
+
+
+.blockquote{
+  &__about{
+    position: relative;
+    border: 0px;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    &:before{
+      content:"";
+      width: 57px;
+      height: 44px;
+      background: url($path_image + 'bg_blockquote_left.png') no-repeat;
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    &:after{
+      content:"";
+      width: 57px;
+      height: 44px;
+      background: url($path_image + 'bg_blockquote_right.png') no-repeat;
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+  }
+}
+
+.aboutus{
+  .row{
+    justify-content: center;
+  }
+}
+
+
+.value{
+  background: url($path-image + "bg_pattern_light_grey.jpg") repeat;
+  &__icon{
+    background: white;
+    border: 3px solid $main-color-primary;
+    border-radius: 100%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+    box-shadow: 0px 0px 30.42px 2.58px rgba(48, 48, 48, 0.24);
+    i{
+      font-size: 60px;
+      color: $main-color-primary;
+    }
+  }
+  &__title{
+    text-align: center;
+  }
+  &__text{
+    text-align: center;
+  }
+}
+
+.insider{
+  &__listct{
+    background: $main-color-primary;
+    display: flex;
+    margin-bottom: 30px;
+  }
+  &__img{
+    img{
+      object-position: center;
+      object-fit: cover;
+      width: 240px;
+    }
+  }
+  &__des{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: white;
+  }
+}
+
+.clientinsider{
+  background: url($path-image + "bg_pattern_light_grey.jpg") repeat;
+  &__img{
+    img{
+      width: 100%;
+      max-height: 500px;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+  &__main{
+    padding-top: 50px;
+  }
+  &__list{
+    position: relative;
+    padding-left: 60px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    i{
+      color: $main-color-primary;
+      font-size: 40px;
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      top: 50%;
+      left: 0px;
+      margin-top: -20px;
+    }
+    span{
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+}

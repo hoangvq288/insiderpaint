@@ -1,0 +1,226 @@
+.service{
+  overflow: hidden;
+  position: relative;
+  &:before{
+    height: 100%;
+    min-height: 100%;
+    width: 200px;
+    background: url($path-image + "bg_dot_loop.jpg") repeat;
+    display: block;
+    content:"";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    .service__title{
+
+    }
+  }
+  .container{
+    position: relative;
+    @include bg-water-dot();
+    &:before{
+      top: -240px;
+      left: -220px;
+    }
+  }
+  &__list{
+    &:nth-child(1){
+      .service__title{
+        background-color: #918b91;
+      }
+    }
+    &:nth-child(2){
+      .service__title{
+        background-color: #716a71;
+      }
+    }
+    &:nth-child(3){
+      .service__title{
+        background-color: #4f4b4f;
+      }
+    }
+    &:nth-child(4){
+      .service__title{
+        background-color: #2e252e;
+      }
+    }
+  }
+  &__img{
+    img{
+      width: 100%;
+      max-height: 246px;
+      object-position: center;
+      object-fit: cover;
+      border: 0px;
+    }
+  }
+  &__title{
+    background: url($path-image + "bg_service.png") no-repeat top right #918b91;
+    font-family: 'Anton', sans-serif;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    font-weight: 300;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+.news{
+  background: url($path-image + "bg_pattern_light_grey.jpg") repeat;
+  position: relative;
+  overflow: hidden;
+  @include bg-water-dot();
+  &:before{
+    bottom: -100px;
+    right: -100px;
+  }
+  .title{
+    text-align: left;
+  }
+  &__feature{
+    position: relative;
+    height: 347px;
+    .news__title{
+      position: absolute;
+      bottom: 10px;
+      left: 0px;
+      padding-left: 15px;
+      padding-right: 15px;
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      padding-top: 15px;
+      &--link{
+        color: white;
+        &:hover{
+          color: $main-color-primary;
+        }
+      }
+    }
+  }
+  &__title{
+    &--link{
+      font-family: 'Anton', sans-serif;
+      font-size: 20px;
+      color: $main-color-second;
+      display: block;
+      text-transform: uppercase;
+    }
+  }
+  &__img{
+    margin-bottom: 15px;
+    img{
+      width: 100%;
+    }
+  }
+  &__date{
+    color: #8b8b8b;
+  }
+  &__list{
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column;
+    &:nth-child(2n){
+      flex-direction: column-reverse;
+      .news__img{
+        margin-bottom: 0px;
+        margin-top: 15px;
+      }
+    }
+  }
+  &__des{
+    font-size: 14px;
+    max-height: 68px;
+    overflow: hidden;
+    text-align: justify;
+  }
+  &__sub{
+    ul{
+      /*display: flex;*/
+    }
+  }
+  .bx-wrapper{
+    .bx-controls-direction {
+      a{
+        top: -32px;
+      }
+      .bx-prev{
+        left: inherit;
+        right: 60px;
+      }
+    }
+  }
+}
+
+
+.companyinfo{
+  background: url($path-image + "bg_pattern_dark_grey.jpg") repeat;
+  color: white;
+  &__title{
+    position: relative;
+    text-transform: uppercase;
+    i{
+      position: absolute;
+      top: 0px;
+      right: 0px;
+    }
+    &:before{
+      height: 5px;
+      width: 50px;
+      content: "";
+      background: $main-color-primary;
+      position: absolute;
+      top: -20px;
+      left: 0px;
+    }
+  }
+  &__img{
+    margin-bottom: 15px;
+    box-shadow: 0px 9px 21px 0px rgba(0, 0, 0, 0.31);
+    img{
+      width: 100%;
+    }
+  }
+  p{
+    text-align: justify;
+  }
+}
+.client{
+  &__title{
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: -10px;
+    h3{
+      margin-bottom: 0px;
+      text-transform: uppercase;
+    }
+  }
+  .container{
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  .bxslider_client{
+    li{
+      margin-right: 5px;
+      text-align: center;
+      img{
+        /*width: 100%;*/
+      }
+    }
+  }
+  .bx-wrapper{
+    .bx-controls-direction {
+      .bx-prev{
+        left: -60px;
+      }
+      .bx-next{
+        right: -60px;
+      }
+    }
+  }
+}
