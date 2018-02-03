@@ -673,16 +673,21 @@ footer{
       }
       a{
         display: block;
-        padding-left: 10px;
-        padding-right: 10px;
-        background: #e5e5e5;
+        padding-left: 12px;
+        padding-right: 12px;
         color: black;
         display: flex;
         align-items: center;
         justify-content: center;
-        min-width: 25px;
+        min-width: 30px;
         height: 30px;
         text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
+        border-radius: 100%;
+        &:hover{
+          background:#e5e5e5;
+        }
       }
       i{
         font-size: 24px;
@@ -703,7 +708,9 @@ footer{
       }
       &.prev__btn, &.next__btn{
         a{
-          background: #e5e5e5;
+          background: $main-color-second;
+          color: $main-color-primary;
+          border-radius: 30px;
           &:hover{
             color: white;
             background: $main-color-primary;
