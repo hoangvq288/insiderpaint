@@ -15,12 +15,13 @@
    </head>
    <body>
    <main>
+    <?php get_template_part( 'menu', get_post_format() ); ?>
     <header class="header">
       <div class="header__left">
-        <a href="" class="header__leftct">
+        <a href="javascript:;" class="header__leftct">
           <i class="fa fa-navicon"></i>
         </a>
-        <a href="">
+        <a href="javascript:;">
           <i class="fa fa-search"></i>
         </a>
       </div>
@@ -33,7 +34,7 @@
         </h1>
       </div>
       <div class="header__right">
-        <a href="">
+        <a href="javascript:;" class="header__rightct">
           <i class="fa fa-share-alt-square"></i>
         </a>
       </div>
