@@ -18,7 +18,7 @@ get_header(); ?>
 
 <?php get_template_part( 'banner_homepage', get_post_format() ); ?>
 <div class="main-content">
-
+  
   <section class="service">
     <div class="container">
       <ul class="row">

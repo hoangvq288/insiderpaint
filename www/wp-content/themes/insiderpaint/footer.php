@@ -2,7 +2,9 @@
    <footer class="footer">
     <div class="container">
       <div class="footer__content">
-        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_footer.png" alt="">
+        <a href="<?php echo get_home_url(); ?>">
+          <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_footer.png" alt="">
+        </a>
         <p class="footer__des">Có rất nhiều biến thể của Lorem Ipsum<br>mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng cách thêm các yếu tố hài hước, các từ ngẫu nhiên có khi không có vẻ gì là có ý nghĩa.</p>
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Nhập địa chỉ email để nhận thông tin của chúng tôi">
@@ -29,6 +31,26 @@
       </div>
     </div>
     <div class="footer__bottom">
+      <ul>
+        <li>
+          <a href="#">Trang chủ</a>
+        </li>
+        <li>
+          <a href="#">Giới thiệu</a>
+        </li>
+        <li>
+          <a href="#">Danh mục sản phẩm</a>
+        </li>
+        <li>
+          <a href="#">Truyền thông</a>
+        </li>
+        <li>
+          <a href="#">Dự án tiêu biểu</a>
+        </li>
+        <li>
+          <a href="">Liên Hệ & Hợp tác</a>
+        </li>
+      </ul>
       <p>
         Copyright 2018 by Insider. All rights reserved.
       </p>
