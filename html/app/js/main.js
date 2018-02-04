@@ -41,6 +41,12 @@ jQuery.noConflict();
 					slideWidth:'270',
 					slideMargin: '30',
 				});
+				$('.bxslider_product_detail').bxSlider({
+					minSlides: "2",
+					maxSlides: "3",
+					slideWidth:'auto',
+					slideMargin: '10',
+				});
 			},
 
 			nav_action : function() {
