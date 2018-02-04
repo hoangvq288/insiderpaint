@@ -150,27 +150,27 @@ get_header(); ?>
                   CÁC GIẢI PHÁP CHO KHÁCH HÀNG
                 </h3>
                 <ul class="row">
-                  <li class="col-lg-6 col-12 clientinsider__list">
+                  <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-briefcase-alt-1"></i>
                     <span>Giải pháp trọn gói bao gồm sản phẩm & dịch vụ thi công chuyên nghiệp.</span>
                   </li>
-                  <li class="col-lg-6 col-12 clientinsider__list">
+                  <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-girl-alt"></i>
                     <span>Chuyên viên tư vấn chu đáo cho các nhu cầu của khách hàng.</span>
                   </li>
-                  <li class="col-lg-6 col-12 clientinsider__list">
+                  <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-shield-alt"></i>
                     <span>Bảo hành cho sản phẩm & dịch vụ.</span>
                   </li>
-                  <li class="col-lg-6 col-12 clientinsider__list">
+                  <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-paint-brush"></i>
                     <span>Thiết kế nhiều mẫu tường nghệ thuật đa dạng phù hợp cho mọi loại không gian nội thất.</span>
                   </li>
-                  <li class="col-lg-6 col-12 clientinsider__list">
+                  <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-building-alt"></i>
                     <span>Phối hợp quản lí thi công hiệu quả về chi phí và tiến độ.</span>
                   </li>
-                  <li class="col-lg-6 col-12 clientinsider__list">
+                  <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-trowel"></i>
                     <span>Tùy chỉnh và cung cấp giải pháp phù hợp cho nhu cầu của khách hàng.</span>
                   </li>
