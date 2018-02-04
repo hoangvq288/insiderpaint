@@ -51,6 +51,11 @@ jQuery.noConflict();
 					slideWidth: "auto",
 					slideMargin: '0',
 				});
+				$('.bxslider-project').bxSlider({
+					minSlides: "4",
+					maxSlides: "4",
+					slideWidth:'300',
+				});
 			},
 
 			nav_action : function() {

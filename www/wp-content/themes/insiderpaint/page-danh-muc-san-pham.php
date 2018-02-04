@@ -14,11 +14,21 @@ get_header(); ?>
   </h2>
   <div class="banner__slider">
     <ul class="bxslider">
-      <li>
-        <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_banner_pd_1.jpg" alt="">
-      </li>
+      <?php 
+        $images = get_field('slider');
+        if( $images ): ?>
+            <?php foreach( $images as $id=>$image ): ?>
+                 <li>
+                    <img src="<?php echo $image['url']?>" alt="">
+                  </li>
+            <?php endforeach; ?>
+      <?php endif; ?>
     </ul>
   </div>
+
+
+
+
 </section>
 <div class="main-content">
   <section class="product">
@@ -181,81 +191,11 @@ get_header(); ?>
           </div>
         </li>
       </ul>
-      <div class="paging">
-        <ul>
-          <li class="prev__btn">
-              <a href="">
-                 <i class="fa fa-angle-left"></i>
-                 Prev
-              </a>
-           </li>
-           <li class="active">
-              <a href="">1</a>
-           </li>
-           <li>
-              <a href="">2</a>
-           </li>
-           <li>
-              <a href="">3</a>
-           </li>
-           <li>
-              <a href="">4</a>
-           </li>
-           <li>
-              <a href="">...</a>
-           </li>
-           <li>
-              <a href="">10</a>
-           </li>
-           <li class="next__btn">
-              <a href="">
-                 Next
-                 <i class="fa fa-angle-right"></i>
-              </a>
-           </li>
-        </ul>
+      
     </div>
     </div>
   </section>
-  <section class="client">
-    <div class="client__title">
-      <h3>Khách hàng Dự Án</h3>
-    </div>
-    <div class="container">
-      <ul class="bxslider_client">
-        <li>
-          <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_1.png" alt="">
-        </li>
-        <li>
-          <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_2.png" alt="">
-        </li>
-        <li>
-          <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_3.png" alt="">
-        </li>
-        <li>
-          <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_4.png" alt="">
-        </li>
-        <li>
-          <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_5.png" alt="">
-        </li>
-        <li>
-          <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_1.png" alt="">
-        </li>
-        <li>
-          <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_2.png" alt="">
-        </li>
-        <li>
-          <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_3.png" alt="">
-        </li>
-        <li>
-          <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_4.png" alt="">
-        </li>
-        <li>
-          <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_5.png" alt="">
-        </li>
-      </ul>
-    </div>
-  </section>
+  <?php get_template_part( 'section_client', get_post_format() ); ?>
 </div>
 
 
