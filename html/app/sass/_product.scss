@@ -60,3 +60,32 @@
     }
   }
 }
+
+
+.ispdetail{
+  .modal-content{
+    position: relative;
+    .modal-header{
+      justify-content: flex-end;
+      position: absolute;
+      top: 0px;
+      right: 13px;
+      z-index: 1;
+      border: 0px;
+      i{
+        font-size: 14px;
+      }
+    }
+    .modal-footer{
+      border-top: 0px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+  }
+  &__img{
+    margin-bottom: 15px;
+    img{
+      width: 100%;
+    }
+  }
+}

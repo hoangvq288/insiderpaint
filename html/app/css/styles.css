@@ -16092,11 +16092,6 @@ footer .sociallink {
         line-height: 21px; }
 
 /*modal*/
-.modal-content .modal-header {
-  background: #413f44; }
-  .modal-content .modal-header img {
-    width: 20px; }
-
 .modal-content .modal-title {
   text-align: center;
   text-align: center;
@@ -16715,6 +16710,27 @@ footer .sociallink {
       .tab-inspiration ul li a:hover {
         background: #d5d5d5; }
 
+.ispdetail .modal-content {
+  position: relative; }
+  .ispdetail .modal-content .modal-header {
+    justify-content: flex-end;
+    position: absolute;
+    top: 0px;
+    right: 13px;
+    z-index: 1;
+    border: 0px; }
+    .ispdetail .modal-content .modal-header i {
+      font-size: 14px; }
+  .ispdetail .modal-content .modal-footer {
+    border-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+.ispdetail__img {
+  margin-bottom: 15px; }
+  .ispdetail__img img {
+    width: 100%; }
+
 .banner__sub ul.bxslider_product_detail li img {
   padding: 10px 5px;
   height: 600px; }
@@ -16770,7 +16786,7 @@ footer .sociallink {
   .productdetail__tab--content li a {
     font-family: "Anton", sans-serif;
     display: block;
-    padding: 20px;
+    padding: 20px 50px;
     font-size: 20px; }
   .productdetail__tab--content li.active a {
     background: #e5bd5e;
