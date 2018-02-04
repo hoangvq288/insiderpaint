@@ -28,6 +28,7 @@
   text-align: center;
   margin-bottom: 50px;
   font-size: 28px;
+  line-height: 40px;
   &__line{
     &:before{
       height: 5px;
@@ -59,6 +60,9 @@
     margin-top: 50px;
     margin-bottom: 30px;
     font-size: 24px;
+    padding-left: 80px;
+    padding-right: 80px;
+    line-height: 36px;
     &:before{
       content:"";
       width: 57px;
@@ -66,8 +70,9 @@
       background: url($path_image + 'bg_blockquote_left.png') no-repeat;
       display: block;
       position: absolute;
-      top: 0px;
+      top: 50%;
       left: 0px;
+      margin-top: -22px;
     }
     &:after{
       content:"";
@@ -76,8 +81,9 @@
       background: url($path_image + 'bg_blockquote_right.png') no-repeat;
       display: block;
       position: absolute;
-      top: 0px;
+      top: 50%;
       right: 0px;
+      margin-top: -22px;
     }
   }
 }
@@ -133,15 +139,22 @@
   &__des{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 30px;
     color: white;
+    h4{
+      line-height: 28px;
+    }
   }
 }
 
 .clientinsider{
   background: url($path-image + "bg_pattern_light_grey.jpg") repeat;
+  .title{
+    margin-bottom: 30px;
+  }
   &__img{
     img{
       width: 100%;
@@ -155,23 +168,23 @@
   }
   &__list{
     position: relative;
-    padding-left: 75px;
+    padding-left: 60px;
     display: flex;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     i{
       color: $main-color-primary;
-      font-size: 40px;
+      font-size: 28px;
       display: inline-block;
       vertical-align: middle;
       position: absolute;
       top: 50%;
       left: 15px;
-      margin-top: -20px;
+      margin-top: -15px;
     }
     span{
       font-weight: 700;
-      font-size: 16px;
+      font-size: 14px;
     }
   }
 }
