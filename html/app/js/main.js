@@ -47,6 +47,10 @@ jQuery.noConflict();
 					slideWidth:'auto',
 					slideMargin: '10',
 				});
+				$('.bxslider_isp_detail').bxSlider({
+					slideWidth: "auto",
+					slideMargin: '0',
+				});
 			},
 
 			nav_action : function() {

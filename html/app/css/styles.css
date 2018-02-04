@@ -16709,9 +16709,17 @@ footer .sociallink {
       color: black; }
       .tab-inspiration ul li a:hover {
         background: #d5d5d5; }
+  .tab-inspiration + .product .product__img {
+    margin-bottom: 0px; }
 
 .ispdetail .modal-content {
   position: relative; }
+  .ispdetail .modal-content h4 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 16px; }
+  .ispdetail .modal-content p {
+    margin-bottom: 0px; }
   .ispdetail .modal-content .modal-header {
     justify-content: flex-end;
     position: absolute;
@@ -16723,13 +16731,28 @@ footer .sociallink {
       font-size: 14px; }
   .ispdetail .modal-content .modal-footer {
     border-top: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px; }
+    padding-top: 0px;
+    padding-bottom: 5px; }
 
 .ispdetail__img {
   margin-bottom: 15px; }
   .ispdetail__img img {
     width: 100%; }
+
+.bd-img-modal-lg.show {
+  display: flex !important;
+  justify-content: center;
+  align-items: center; }
+
+.bxslider_isp_detail li {
+  width: 768px !important;
+  text-align: center; }
+  .bxslider_isp_detail li img {
+    height: 500px;
+    width: auto;
+    display: inline-block;
+    object-position: center;
+    object-fit: cover; }
 
 .banner__sub ul.bxslider_product_detail li img {
   padding: 10px 5px;
