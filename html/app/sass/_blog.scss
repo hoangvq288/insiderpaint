@@ -1,0 +1,956 @@
+.blog-ct{
+  .featured-detail{
+    .feature-img{
+      background-size: cover !important;
+    }
+  }
+}
+
+.title-main{
+  margin-bottom: 30px;
+}
+
+.featured-article{
+  .title{
+    + p{
+      text-align: center;
+      margin-top: -50px;
+    }
+  }
+}
+
+.blog-content{
+  .blog-ct{
+    .feature-img{
+      height: 500px;
+      width: 100%;
+      background-size: cover !important;
+      background-position: center !important;
+      display: block;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.btn-ct{
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.sub-article{
+  margin-top: 50px;
+  &.news{
+    .article-content{
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+  ul{
+    li{
+      span{
+        font-weight: 300 !important;
+      }
+    }
+  }
+  img{
+    width: 100% !important;
+    max-width: 100% !important;
+    object-fit: cover;
+    object-position: center;
+  }
+  .article-img{
+    + .article-content{
+      h3{
+        &:before{
+          display: none;
+        }
+      }
+    }
+  }
+  .article-content{
+    @include breakpoint(desktop){
+      padding-right: 150px;
+    }
+    h3{
+      position: relative;
+      font-size: 18px;
+      line-height: 24px;
+      @include breakpoint(tablet){
+        font-size: 22px;
+        line-height: 26px;
+      }
+      &:before{
+        content: " ";
+        display: block;
+        height: 2px;
+        width: 50px;
+        position: absolute;
+        top: -15px;
+      }
+    }
+    &.search-content{
+      width: 100%;
+      padding-right: 0px;
+      margin-bottom: 50px;
+      h4{
+        font-size: 18px;
+        font-weight: 500;
+      }
+      p{
+        margin-bottom: 10px;
+      }
+      .search-form--inner{
+        position: relative;
+        &:before{
+          content: " ";
+          display: block;
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          bottom: -30px;
+        }
+        input{
+          background: transparent;
+          border: 0px;
+          color: white;
+          margin-bottom: 50px;
+        }
+        button{
+          position: absolute;
+          top: 6px;
+          right: 7px;
+          background: transparent;
+          border: 0px;
+          span{
+            color: white;
+            background: transparent;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+  article{
+    margin-bottom: 30px;
+    font-weight: 300;
+    @include breakpoint(desktop){
+      margin-bottom: 50px;
+    }
+    &:last-of-type{
+      margin-bottom: 0px;
+    }
+    .article-img{
+      margin-bottom: 15px;
+      img{
+        width: 100%;
+        height: 180px;
+        object-position: center;
+        object-fit: cover;
+        @include breakpoint(tablet){
+          height: auto;
+        }
+      }
+    }
+    h3{
+      margin-bottom: 10px;
+    }
+    .article-des{
+      margin-bottom: 15px;
+    }
+    ul{
+      margin-bottom: 10px;
+      padding-bottom: 15px;
+      position: relative;
+      line-height: 1em;
+      &:before{
+        content: " ";
+        height: 1px;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+      }
+      li{
+        display: block;
+        font-weight: 300;
+        margin-bottom: 10px;
+        @include breakpoint(tablet){
+          display: inline-block;
+          margin-bottom: 0px;
+        }
+        span, a{
+          display: block;
+          padding-left: 0px;
+          padding-right: 0px;
+          @include breakpoint(tablet){
+            padding-left: 15px;
+            padding-right: 15px;
+          }
+        }
+        &:nth-child(1){
+          span{
+            padding-left: 0px;
+          }
+        }
+        &:nth-child(2){
+          span{
+            border-left: 0px solid black;
+            border-right: 0px solid black;
+            @include breakpoint(tablet){
+              border-left: 1px solid black;
+              border-right: 1px solid black;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-sidebar{
+  margin-bottom: 50px;
+  .sidebar-title{
+    background: url($path-image + "title-blog-top.svg") no-repeat;
+    background-position: center;
+    background-size: 150%;
+    height: 40px !important;
+    @include breakpoint(desktop){
+      height: 50px !important;
+      background-size: auto;
+    }
+    p{
+      color: white;
+      line-height: 45px;
+      text-align: center;
+    }
+  }
+  .sidebar-content{
+    -webkit-box-shadow:inset 0 0px 0px 0px rgba(0,0,0,0.4);
+    box-shadow:inset 0 0px 0px 0px rgba(0,0,0,0.4);
+    margin-top: -8px;
+    @include breakpoint(desktop){
+      -webkit-box-shadow:inset 0 30px 10px -30px rgba(0,0,0,0.4);
+      box-shadow:inset 0 30px 10px -30px rgba(0,0,0,0.4);
+    }
+  }
+  &.popular{
+    ul{
+      padding-top: 15px;
+      li{
+        font-weight: 300;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        position: relative;
+        a{
+          color: black;
+          display: block;
+          font-size: 14px;
+        }
+        span{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &.category{
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.20);
+    .sidebar-title{
+      position: relative;
+      z-index: 1
+    }
+    .sidebar-content{
+      padding: 1px 1px;
+      -webkit-box-shadow:inset 0 0px 0px 0px rgba(0,0,0,0.4);
+        box-shadow:inset 0 0px 0px 0px rgba(0,0,0,0.4);
+      margin-top: -8px;
+      ul{
+        background: white;
+        padding: 30px 15px;
+        -webkit-box-shadow:inset 0 30px 10px -30px rgba(0,0,0,0.4);
+        box-shadow:inset 0 30px 10px -30px rgba(0,0,0,0.4);
+        li{
+          margin-bottom: 20px;
+          img{
+            margin-right: 30px;
+            position: absolute;
+            top: -4px;
+            left: 10px;
+            width: 26px !important;
+          }
+          a{
+            color: black;
+            font-weight: 300;
+            display: block;
+            position: relative;
+            padding-left: 61px;
+          }
+        }
+      }
+    }
+  }
+  &.search{
+    position: relative;
+    .sidebar-title{
+      height: 40px;
+      padding-right: 50px;
+      background-size: 150%;
+      @include breakpoint(desktop){
+        height: 42px !important;
+        background-size: 100% 170%;
+      }
+      input{
+        background: transparent;
+        border: 0px;
+        color: white;
+        line-height: 25px;
+        font-weight: 300;
+        font-size: 14px;
+      }
+    }
+    button{
+      border: 0px;
+      background: transparent;
+      position: absolute;
+      top: 7px;
+      right: 8px;
+      span{
+        color: white;
+      }
+    }
+    a{
+      color: white;
+      position: absolute;
+      top: 8px;
+      right: 15px;
+      i{
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.social{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  li{
+    a{
+      width: 50px;
+      height: 50px;
+      display: block;
+      border: 1px solid $main-color-primary;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &:hover{
+        background: $main-color-second;
+        border: 0px;
+        color: white;
+      }
+      i{
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.ads{
+  background-size: cover !important;
+  background-position: center !important;
+  display: block;
+  color: white;
+  padding: 30px 30px 30px;
+  p{
+    text-align: left;
+    @include breakpoint(desktop){
+      text-align: center;
+    }
+  }
+  .author-ct{
+    margin-top: 15px;
+    position: relative;
+    padding-left: 60px;
+    .img-ct{
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      display: inline-block;
+      background-size: cover !important;
+      background-position: center !important;
+      border: 1px solid $main-color-primary;
+      position: absolute;
+      top: -5px;
+      left: 0px;
+    }
+    h3{
+      font-size: 18px;
+      margin-bottom: 0px;
+    }
+    p{
+      text-align: left;
+    }
+  }
+  a{
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+.sub-article{
+  .fusion-row{
+    position: relative;
+    padding-top: 30px;
+    &:before{
+      height: 2px;
+      display: block;
+      width: 100%;
+      content: " ";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+  }
+}
+
+
+.article-detail{
+  @include breakpoint(desktop){
+    padding-right: 120px;
+  }
+  .article-ct{
+    position: relative;
+    padding-top: 30px;
+    &:before{
+      height: 2px;
+      display: block;
+      width: 100%;
+      content: " ";
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+    ul{
+      margin-top: 30px;
+      margin-bottom: 30px;
+      li{
+        position: relative;
+        padding-left: 20px;
+        margin-bottom: 10px;
+        &:before{
+          display: block;
+          width: 10px;
+          height: 10px;
+          content: "";
+          position: absolute;
+          top: 5px;
+          left: 0px;
+          border-radius: 100%;
+        }
+      }
+    }
+    blockquote{
+      position: relative;
+      font-size: 28px;
+      padding-top: 30px;
+      padding-bottom: 30px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      @include breakpoint(desktop){
+        width: 110%;
+        margin-left: -10%;
+      }
+      &:before, &:after{
+        height: 2px;
+        display: block;
+        width: 100%;
+        content: " ";
+        position: absolute;
+        top: 2px;
+        left: 0px;
+      }
+      &:after{
+        top: inherit;
+        bottom: 2px;
+      }
+    }
+  }
+  .article-author{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &:before, &:after{
+      height: 2px;
+      display: block;
+      width: 100%;
+      content: " ";
+      position: absolute;
+      top: 2px;
+      left: 0px;
+    }
+    &:after{
+      top: inherit;
+      bottom: 3px;
+    }
+  }
+  .social-network{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .social{
+      margin-top: 30px;
+      margin-bottom: 0px;
+      padding-top: 0px;
+      justify-content: flex-start;
+      li{
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+.author-main-ct{
+  background: #F6F6F6;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin-top: 50px;
+  &.author-book{
+    background: transparent;
+    margin-top: 0px;
+    position: relative;
+    padding-top: 170px;
+    .bg-border{
+      width: 250px;
+      height: 250px;
+    }
+    .author-title{
+      span{
+        display: block;
+        font-size: 20px;
+      }
+      a{
+        margin-right: 15px;
+        margin-left: 0px;
+        margin-top: 20px;
+      }
+    }
+    &:before{
+      position: absolute;
+      content: " ";
+      display: block;
+      top: 0px;
+      left: 0px;
+      background: url($path-image + "dott-texture.png") repeat;
+      height: 100px;
+      width: 100%;
+    }
+  }
+  .author-detail{
+    @include breakpoint(desktop){
+      padding-right: 50px;
+    }
+  }
+  .bg-border{
+    border-radius: 100%;
+    width: 150px;
+    height: 150px;
+    padding: 2px;
+    margin-top: 30px;
+    .author-img-ct{
+      width: 100%;
+      height: 100%;
+      background-size: cover !important;
+      background-position: center !important;
+      border-radius: 100%;
+    }
+  }
+  .author-title{
+    margin-bottom: 15px;
+    display: block;
+    a{
+      display: inline-block;
+      margin-left: 15px;
+      i{
+        font-size: 20px;
+      }
+    }
+  }
+}
+
+.availble-market{
+  background: #e7e7e7;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  h2{
+    text-align: center;
+  }
+  ul{
+    display: flex;
+    padding-top: 20px;
+
+    li{
+      padding: 5px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+.book-img{
+  position: relative;
+  img{
+    width: 100%;
+    position: absolute;
+    top: -60%;
+    z-index: 1000;
+  }
+}
+
+.comments{
+  padding-top: 50px;
+  position: relative;
+  margin-bottom: 100px;
+  .comments-content{
+    @include breakpoint(desktop){
+      padding-right: 120px;
+    }
+  }
+  &:before{
+    height: 400px;
+    background: url($path-image + "dott-texture.png") repeat;
+    display: block;
+    position: absolute;
+    bottom: 60px;
+    content: " ";
+    width: 100%;
+  }
+  .comment-detail{
+    margin-bottom: 50px;
+    ul{
+      li{
+        position: relative;
+        min-height: 80px;
+        margin-bottom: 30px;
+        .comment-title{
+          display: flex;
+          justify-content: space-between;
+          position: relative;
+          &:before{
+            height: 1px;
+            width: 100%;
+            display: block;
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+          }
+        }
+        .comment-des{
+          padding-left: 105px;
+          .comment-title{
+            padding-bottom: 15px;
+            padding-left: 100px;
+            a{
+              text-transform: uppercase;
+              color: black;
+            }
+          }
+          .comment-des-ct{
+            padding-top: 15px;
+            padding-left: 100px;
+          }
+        }
+        .user-img-ct{
+          width: 70px;
+          height: 70px;
+          border-radius: 100%;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          display: block;
+          background-size: cover !important;
+          background-position: center !important;
+        }
+      }
+    }
+  }
+}
+
+
+.comment-form{
+  textarea{
+    border: 0px;
+  }
+  label{
+    margin-bottom: 30px;
+  }
+  .border-form{
+    width: 100%;
+    padding: 1px;
+    margin-bottom: 100px;
+    .form-group{
+      width: 100%;
+      margin-bottom: 0px;
+      background: white;
+      padding: 50px;
+      box-shadow: 0 0 10px 0 rgba(0,0,0,0.10);
+      .from-control{
+        width: 100%;
+      }
+      p{
+        position: relative;
+        padding-top: 15px;
+        margin-bottom: 15px;
+        &:before{
+          content: "";
+          height: 1px;
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          display: block;
+          width: 100%;
+        }
+      }
+    }
+  }
+  a{
+    img{
+      margin-right: 10px;
+    }
+  }
+}
+
+
+.comment-respond{
+  margin-top: 50px;
+  .comment-reply-title{
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .comment-form{
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid $main-color-primary;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    @include breakpoint(desktop){
+      padding: 50px;
+      margin-bottom: 100px;
+    }
+    .logged-in-as{
+      margin-bottom: 30px;
+      a{
+        border-right: 1px solid #e5e5e5;
+        padding-right: 15px;
+        margin-right: 15px;
+        display: inline-block;
+        &:nrh-child(2){
+          border-right: 0px;
+        }
+      }
+    }
+    .comment-form-comment, .comment-form-author, .comment-form-email, .comment-form-url{
+      margin-bottom: 15px;
+      label{
+        display: block;
+        margin-bottom: 0px;
+      }
+      textarea, input{
+        width: 100%;
+        border: 0px !important;
+        border-bottom: 1px solid $main-color-primary !important;
+      }
+      input{
+        height: 38px;
+      }
+    }
+  }
+  .form-submit{
+    input{
+      background: $main-color-second;
+      border-radius: 30px;
+    }
+  }
+}
+
+
+.fushion-post-ct{
+  p{
+    margin-bottom: 20px;
+  }
+  ul{
+    padding-left: 40px;
+    list-style: disc;
+    li{
+      margin-left: inherit;
+    }
+  }
+  h1, h2, h3, h4, h5, h6{
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+  iframe{
+    max-width: 100%;
+  }
+  .article-content{
+    padding-right: 0px;
+    h3{
+      margin-bottom: 15px;
+      margin-top: 15px;
+      font-size: 18px;
+      line-height: 24px;
+      @include breakpoint(desktop){
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+    ul{
+      display: block;
+      padding-left: 0px;
+      list-style: none;
+      padding-bottom: 15px;
+      @include breakpoint(tablet){
+        display: flex;
+      }
+      li{
+        padding-right: 15px;
+        margin-right: 15px;
+        border-right: 1px solid #e5e5e5;
+        margin-bottom: 5px;
+        a{
+          display: inline-block;
+          padding-left: 10px;
+          padding-right: 10px;
+          color: $main-color-primary;
+        }
+        &:nth-child(2){
+          border-right: 0px;
+        }
+        &:last-of-type{
+          border-right: 0px;
+          padding-right: 0px;
+          margin-left: auto;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+.pt0{
+  padding-top: 0px;
+}
+
+
+.comment-blog{
+  #comments{
+    margin-top: 50px;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .commentlist{
+    padding-left: 0px;
+    list-style: none;
+    footer{
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .comment{
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    .comment-content{
+      margin-left: 65px;
+      margin-bottom: 15px;
+      @inlcude breakpoint(tablet){
+        padding-left: 100px;
+      }
+    }
+    .reply{
+      margin-left: 65px;
+      @inlcude breakpoint(tablet){
+        padding-left: 100px;
+      }
+    }
+    .comment-meta{
+      position: relative;
+      b{
+        font-weight: 300;
+        text-transform: uppercase;
+      }
+      .avatar{
+        border-radius: 100%;
+        width: 45px;
+        height: 45px;
+        object-position: center;
+        object-fit: cover;
+        border: 1px solid $main-color-primary;
+        left: 0px;
+        top: -15px;
+        position: absolute;
+        @inlcude breakpoint(tablet){
+          width: 80px;
+          height: 80px;
+          border-width: 2px;
+        }
+      }
+      .comment-metadata{
+        position: absolute;
+        top: 15px;
+        right: 0px;
+        time{
+          color: #999;
+          font-size: 11px;
+          @inlcude breakpoint(tablet){
+            font-size: 12px;
+          }
+        }
+      }
+      .comment-author{
+        position: relative;
+        padding-left: 65px;
+        @inlcude breakpoint(tablet){
+          padding-left: 100px;
+        }
+        &:after{
+          display: block;
+          height: 1px;
+          background: $main-color-primary;
+          content: "";
+          width: 100%;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+.schedule-right{
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 30px !important;
+  padding-right: 30px;
+  @include breakpoint(tablet){
+    padding-right: 0px;
+    padding-left: 40px;
+  }
+  &:before{
+    content: "";
+    height: 100%;
+    min-height: 100%;
+    width: 3px;
+    position: absolute;
+    left: 30px;
+    top: 0px;
+    @include breakpoint(tablet){
+      left: 0px;
+    }
+  }
+}
+
+.m30t{
+  margin-top: 30px;
+}
+

@@ -82,6 +82,7 @@
   }
   .title{
     text-align: left;
+    margin-bottom: 15px;
   }
   &__feature{
     position: relative;
@@ -95,6 +96,7 @@
       color: white;
       background: rgba(0, 0, 0, 0.5);
       padding-top: 15px;
+      width: 100%;
       &--link{
         color: white;
         &:hover{
@@ -116,6 +118,7 @@
     margin-bottom: 15px;
     img{
       width: 100%;
+      min-height: 146px;
     }
   }
   &__date{
@@ -135,13 +138,19 @@
   }
   &__des{
     font-size: 14px;
-    max-height: 68px;
     overflow: hidden;
     text-align: justify;
+    max-height: 42px;
   }
   &__sub{
     ul{
       /*display: flex;*/
+    }
+    .news{
+      &__des{
+        min-height: 68px;
+        max-height: 68px;
+      }
     }
   }
   .bx-wrapper{
@@ -188,6 +197,7 @@
   }
   p{
     text-align: justify;
+    min-height: 88px;
   }
 }
 .client{
@@ -206,11 +216,17 @@
     padding-bottom: 3em;
   }
   .bxslider_client{
+    display: flex;
     li{
       margin-right: 5px;
       text-align: center;
+      display: flex;
+      align-items: center;
       img{
         /*width: 100%;*/
+        max-width: 156px;
+        object-fit: cover;
+        object-position: center;
       }
     }
   }
