@@ -27,7 +27,7 @@
   &__des{
     h4{
       font-size: 14px;
-      font-family: 'Montserrat', sans-serif;
+      font-family: $main-font;
       font-weight: 700;
     }
     p{
@@ -59,4 +59,81 @@
       }
     }
   }
+  + .product{
+    .product{
+      &__img{
+        margin-bottom: 0px;
+      }
+      &__des{
+        margin-top: 15px;
+        p{
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
 }
+
+
+.ispdetail{
+  .modal-content{
+    position: relative;
+    h4{
+      font-family: $main-font;
+      font-weight: 400;
+      font-size: 16px;
+    }
+    p{
+      margin-bottom: 0px;
+    }
+    .modal-header{
+      justify-content: flex-end;
+      position: absolute;
+      top: 0px;
+      right: 13px;
+      z-index: 1;
+      border: 0px;
+      i{
+        font-size: 14px;
+      }
+    }
+    .modal-footer{
+      border-top: 0px;
+      padding-top: 0px;
+      padding-bottom: 5px;
+    }
+  }
+  &__img{
+    margin-bottom: 15px;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+.bd-img-modal-lg{
+  &.show{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.bxslider_isp_detail{
+  li{
+    width: 768px !important;
+    text-align: center;
+    img{
+      height: 500px;
+      width: auto;
+      display: inline-block;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+}
+
+
+
+
+

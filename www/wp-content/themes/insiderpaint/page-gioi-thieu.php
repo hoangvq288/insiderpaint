@@ -15,21 +15,7 @@ get_header(); ?>
       <div class="banner__slider">
         <ul class="bxslider">
           <li>
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_banner_1.jpg" alt="">
-          </li>
-          <li>
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_banner_2.jpg" alt="">
-            <div class="banner__desmain">
-              <div class="banner__des col-md-6">
-                <h2 style="font-family: 'Anton', sans-serif; color: white; font-size: 50px;">
-                  There are many variations<br>
-                  of <span style="color: #e5bc5e;">passages</span> of Lorem Ipsum
-                </h2>
-                <p style="color: white; font-size: 16px;">
-                  Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng cách thêm các yếu tố hài hước, các từ ngẫu nhiên có khi không có vẻ gì là có ý nghĩa.
-                </p>
-              </div>
-            </div>
+            <img src="<?php the_field('hinh_dai_dien') ?>" alt="">
           </li>
         </ul>
       </div>
@@ -43,11 +29,9 @@ get_header(); ?>
                 GIỚI THIỆU VỀ INSIDER
               </h3>
               <div class="aboutus__text">
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng cách thêm các yếu tố hài hước, các từ ngẫu nhiên có khi không có vẻ gì là có ý nghĩa. Nếu bạn định sử dụng một đoạn Lorem Ipsum, bạn nên kiểm tra kĩ đtể chắn chắn là không có gì nhạy cảm được giấu ở giữa đoạn văn bản. <br><br>
-
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng cách thêm các yếu tố hài hước, các từ ngẫu nhiên có khi không có vẻ gì là có ý nghĩa. Nếu bạn định sử dụng một đoạn Lorem Ipsum, bạn nên kiểm tra kĩ để chắn chắn là không có gì nhạy cảm được giấu ở giữa đoạn văn bản. Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng cách thêm các yếu tố hài hước, các từ ngẫu nhiên có khi không có vẻ gì là có ý nghĩa. Nếu bạn định sử dụng một đoạn Lorem Ipsum, bạn nên kiểm tra kĩ để chắn chắn là không có gì nhạy cảm được giấu ở giữa đoạn văn bản.
+                <?php the_field('qua_trinh_hinh_thanh') ?>
                 <blockquote class="blockquote blockquote__about">
-                  Strive for clients <strong>‘satisfation</strong>, strike our <strong>perfection</strong>
+                  <?php the_field('trich_dan') ?>
                 </blockquote>
               </div>
             </div>
@@ -68,7 +52,7 @@ get_header(); ?>
               </div>
               <h4 class="value__title">Mục tiêu</h4>
               <p class="value__text">
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng cách thêm các yếu tố hài hước, các từ ngẫu nhiên có khi không
+                <?php the_field('muc_tieu') ?>
               </p>
             </div>
             <div class="col-lg-4 col-12">
@@ -77,7 +61,7 @@ get_header(); ?>
               </div>
               <h4 class="value__title">Tầm nhìn</h4>
               <p class="value__text">
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng cách thêm các yếu tố hài hước, các từ ngẫu nhiên có khi không
+                <?php the_field('tam_nhin') ?>
               </p>
             </div>
             <div class="col-lg-4 col-12">
@@ -86,7 +70,7 @@ get_header(); ?>
               </div>
               <h4 class="value__title">Sứ mệnh</h4>
               <p class="value__text">
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng cách thêm các yếu tố hài hước, các từ ngẫu nhiên có khi không
+                <?php the_field('su_menh') ?>
               </p>
             </div>
           </div>
@@ -104,9 +88,9 @@ get_header(); ?>
                   <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_tinhthan_1.jpg" alt="">
                 </div>
                 <div class="insider__des">
-                  <h4>TINH THẦN INSIDER</h4>
+                  <h4>SÁNG TẠO & VƯỢT QUA THỬ THÁCH</h4>
                   <p>
-                    Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
+                    Công việc đòi hỏi mỗi thành viên phải luôn sáng tạo và tìm cách vượt qua những thử thách trong công việc nhằm mang lại sự hài lòng cho khách hàng.
                   </p>
                 </div>
               </div>
@@ -117,9 +101,9 @@ get_header(); ?>
                   <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_tinhthan_2.jpg" alt="">
                 </div>
                 <div class="insider__des">
-                  <h4>TINH THẦN INSIDER</h4>
+                  <h4>ĐOÀN KẾT & HỖ TRỢ</h4>
                   <p>
-                    Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
+                    Các thành viên Insider cùng nhau nỗ lực, hỗ trợ và đoàn kết để hướng đến mục đích chung của cả tập thể.
                   </p>
                 </div>
               </div>
@@ -130,9 +114,9 @@ get_header(); ?>
                   <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_tinhthan_3.jpg" alt="">
                 </div>
                 <div class="insider__des">
-                  <h4>TINH THẦN INSIDER</h4>
+                  <h4>TỬ TẾ & HIỆU QUẢ</h4>
                   <p>
-                    Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
+                    Luôn tử tế và hiệu quả trong công việc để trở nên đáng tin cậy với khách hàng và với các thành viên trong tổ chức của mình.
                   </p>
                 </div>
               </div>
@@ -143,9 +127,9 @@ get_header(); ?>
                   <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_tinhthan_4.jpg" alt="">
                 </div>
                 <div class="insider__des">
-                  <h4>TINH THẦN INSIDER</h4>
+                  <h4>THÂN THIỆN & VUI VẺ</h4>
                   <p>
-                    Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
+                    Tinh thần thân thiện và vui vẻ sẽ giúp các thành viên Insider đi xa hơn cùng với nhau và với khách hàng.
                   </p>
                 </div>
               </div>
@@ -166,29 +150,29 @@ get_header(); ?>
                   CÁC GIẢI PHÁP CHO KHÁCH HÀNG
                 </h3>
                 <ul class="row">
-                  <li class="col-lg-6 col-12 clientinsider__list">
+                  <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-briefcase-alt-1"></i>
-                    <span>Trọn gói thi công <br> - vật tư</span>
+                    <span>Giải pháp trọn gói bao gồm sản phẩm & dịch vụ thi công chuyên nghiệp.</span>
                   </li>
-                  <li class="col-lg-6 col-12 clientinsider__list">
+                  <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-girl-alt"></i>
-                    <span>Tư vấn</span>
+                    <span>Chuyên viên tư vấn chu đáo cho các nhu cầu của khách hàng.</span>
                   </li>
-                  <li class="col-lg-6 col-12 clientinsider__list">
+                  <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-shield-alt"></i>
-                    <span>Bảo hành</span>
+                    <span>Bảo hành cho sản phẩm & dịch vụ.</span>
                   </li>
-                  <li class="col-lg-6 col-12 clientinsider__list">
+                  <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-paint-brush"></i>
-                    <span>Sản phẩm<br>phong phú</span>
+                    <span>Thiết kế nhiều mẫu tường nghệ thuật đa dạng phù hợp cho mọi loại không gian nội thất.</span>
                   </li>
-                  <li class="col-lg-6 col-12 clientinsider__list">
+                  <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-building-alt"></i>
-                    <span>Thi công<br>nhanh chóng</span>
+                    <span>Phối hợp quản lí thi công hiệu quả về chi phí và tiến độ.</span>
                   </li>
-                  <li class="col-lg-6 col-12 clientinsider__list">
+                  <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-trowel"></i>
-                    <span>Customize sản<br>phẩm theo ý muốn<br>khách hàng</span>
+                    <span>Tùy chỉnh và cung cấp giải pháp phù hợp cho nhu cầu của khách hàng.</span>
                   </li>
                 </ul>
               </div>
@@ -196,45 +180,7 @@ get_header(); ?>
           </div>
         </div>
       </section>
-      <section class="client">
-        <div class="client__title">
-          <h3>Khách hàng Dự Án</h3>
-        </div>
-        <div class="container">
-          <ul class="bxslider_client">
-            <li>
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_1.png" alt="">
-            </li>
-            <li>
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_2.png" alt="">
-            </li>
-            <li>
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_3.png" alt="">
-            </li>
-            <li>
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_4.png" alt="">
-            </li>
-            <li>
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_5.png" alt="">
-            </li>
-            <li>
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_1.png" alt="">
-            </li>
-            <li>
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_2.png" alt="">
-            </li>
-            <li>
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_3.png" alt="">
-            </li>
-            <li>
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_4.png" alt="">
-            </li>
-            <li>
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/logo_client_5.png" alt="">
-            </li>
-          </ul>
-        </div>
-      </section>
+      <?php get_template_part( 'section_client', get_post_format() ); ?>
     </div>
 
 

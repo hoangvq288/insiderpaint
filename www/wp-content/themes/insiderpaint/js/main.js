@@ -41,6 +41,21 @@ jQuery.noConflict();
 					slideWidth:'270',
 					slideMargin: '30',
 				});
+				$('.bxslider_product_detail').bxSlider({
+					minSlides: "2",
+					maxSlides: "3",
+					slideWidth:'auto',
+					slideMargin: '10',
+				});
+				$('.bxslider_isp_detail').bxSlider({
+					slideWidth: "auto",
+					slideMargin: '0',
+				});
+				$('.bxslider-project').bxSlider({
+					minSlides: "4",
+					maxSlides: "4",
+					slideWidth:'300',
+				});
 			},
 
 			nav_action : function() {

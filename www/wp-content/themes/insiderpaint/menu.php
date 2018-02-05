@@ -86,7 +86,7 @@
           </a>
         </li>
         <li>
-          <a href="javascript:;">
+          <a href="<?php echo get_permalink(get_page_by_path('mau-son-tao-cam-hung')->ID) ?>" class="nav__link">
              Mẫu sơn nghệ thuật tạo cảm hứng
           </a>
         </li>

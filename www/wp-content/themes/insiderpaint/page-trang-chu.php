@@ -88,7 +88,9 @@ get_header(); ?>
         <div class="col-lg-6">
           <div class="news__feature">
             <div class="news__img">
-              <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="">
+              <?php $feature_post_image_url = get_the_post_thumbnail_url(get_the_ID()); ?>
+              <?php $feature_image_url = $feature_post_image_url ? $feature_post_image_url :  (get_bloginfo('template_directory').'/images/img_news_1.jpg') ?>
+              <img src="<?php echo $feature_image_url ?>" alt="">
             </div>
             <div class="news__title">
               <a href="#" class="news__title--link">
@@ -98,7 +100,7 @@ get_header(); ?>
                 <?php the_date(); ?>
               </span>
               <p class="news__des">
-                <?php echo wp_trim_words(get_the_content(), 50, '...'); ?>
+                <?php echo wp_trim_words(get_the_content(), 45, '...'); ?>
               </p>
             </div>
           </div>
@@ -134,17 +136,19 @@ get_header(); ?>
                 
                 <li class="news__list">
                   <div class="news__img">
-                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="">
+                    <?php $post_image_url = get_the_post_thumbnail_url(get_the_ID()); ?>
+                    <?php $image_url = $post_image_url ? $post_image_url :  (get_bloginfo('template_directory').'/images/img_news_2.jpg') ?>
+                    <img src="<?php echo $image_url ?>" alt="" height="159px">
                   </div>
                   <div class="news__title">
                     <a href="#" class="news__title--link">
                       <?php the_title(); ?>
                     </a>
                     <span class="news__date">
-                      <?php the_date(); ?>
+                      <?php echo get_the_date(); ?>
                     </span>
                     <p class="news__des">
-                      <?php echo wp_trim_words(get_the_content(), 10, '...'); ?>
+                      <?php echo wp_trim_words(get_the_content(), 20, '...'); ?>
                     </p>
                     <a href="#" class="btn btn-primary">
                       Xem Thêm
@@ -211,29 +215,6 @@ get_header(); ?>
     </div>
   </section>
 
-  <section class="client">
-    <div class="client__title">
-      <h3>Khách hàng Dự Án</h3>
-    </div>
-    <div class="container">
-      <ul class="bxslider_client">
-        <?php 
-        $the_query = new WP_Query(array( 'post_type' => 'doi-tac',
-                 'posts_per_page' => 10 ,
-                 'orderby' => 'date',
-                 'order' => 'DESC'));
-             while ($the_query->have_posts()) {
-                 $the_query->the_post();
-                 ?>
-                  <li>
-                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="">
-                  </li>
-       <?php  
-                 }
-        ?>  
-
-      </ul>
-    </div>
-  </section>
+  <?php get_template_part( 'section_client', get_post_format() ); ?>
 </div>
 <?php get_footer(); ?>

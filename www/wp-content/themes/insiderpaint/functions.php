@@ -168,7 +168,7 @@ if (!function_exists('tuyendung_init')) {
            'rewrite' => array('slug' => 'tuyen-dung','with_front' => false),
            'capability_type' => 'post',
            'has_archive' => true,
-           'hierarchical' => false,
+           'hierarchical' => true,
            'menu_position' => 30,
            'supports' => array('title', 'editor', 'author')
        );
