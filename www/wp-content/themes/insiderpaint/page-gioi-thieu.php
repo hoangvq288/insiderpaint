@@ -144,7 +144,7 @@ get_header(); ?>
           </div>
           <div class="col-lg-6 col-12">
             <div class="row">
-              <div class="col-lg-6 col-12 clientinsider__main">
+              <div class="col-lg-10 col-12 clientinsider__main">
                 <h3 class="title title__line title__line--left">
                   CHÚNG TÔI CUNG CẤP <br>
                   CÁC GIẢI PHÁP CHO KHÁCH HÀNG
