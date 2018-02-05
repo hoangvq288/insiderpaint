@@ -1,3 +1,13 @@
+.banner__news{
+  .banner__slider{
+    img{
+      object-fit: cover;
+      object-position: center;
+      height: 500px;
+      width: 100%;
+    }
+  }
+}
 .blog-ct{
   .featured-detail{
     .feature-img{
@@ -15,6 +25,11 @@
     + p{
       text-align: center;
       margin-top: -50px;
+    }
+  }
+  &__sub{
+    h2, p{
+      text-align: left !important;
     }
   }
 }
@@ -39,7 +54,7 @@
 }
 
 .sub-article{
-  margin-top: 50px;
+  margin-top: -60px;
   &.news{
     .article-content{
       padding-left: 0px;
@@ -157,12 +172,14 @@
     }
     .article-des{
       margin-bottom: 15px;
+      text-align: justify;
     }
     ul{
       margin-bottom: 10px;
       padding-bottom: 15px;
       position: relative;
       line-height: 1em;
+      border-bottom: 1px solid #e5e5e5;
       &:before{
         content: " ";
         height: 1px;
@@ -210,9 +227,9 @@
 }
 
 .section-sidebar{
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   .sidebar-title{
-    background: url($path-image + "title-blog-top.svg") no-repeat;
+    background: #e6e6e6;
     background-position: center;
     background-size: 150%;
     height: 40px !important;
@@ -223,7 +240,9 @@
     p{
       color: white;
       line-height: 45px;
-      text-align: center;
+      text-align: left;
+      padding-left: 15px;
+      background: $main-color-second;
     }
   }
   .sidebar-content{
@@ -243,6 +262,7 @@
         padding-top: 10px;
         padding-bottom: 10px;
         position: relative;
+        border-bottom: 1px dotted #e6e6e6;
         a{
           color: black;
           display: block;
@@ -284,7 +304,6 @@
             font-weight: 300;
             display: block;
             position: relative;
-            padding-left: 61px;
           }
         }
       }
@@ -303,7 +322,7 @@
       input{
         background: transparent;
         border: 0px;
-        color: white;
+        color: black;
         line-height: 25px;
         font-weight: 300;
         font-size: 14px;
@@ -326,6 +345,7 @@
       right: 15px;
       i{
         font-size: 20px;
+        color: $main-color-primary;
       }
     }
   }
@@ -335,6 +355,8 @@
   display: flex;
   justify-content: space-between;
   padding-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
   li{
     a{
       width: 50px;
@@ -362,7 +384,7 @@
   background-position: center !important;
   display: block;
   color: white;
-  padding: 30px 30px 30px;
+  padding: 0px;
   p{
     text-align: left;
     @include breakpoint(desktop){
@@ -417,9 +439,6 @@
 
 
 .article-detail{
-  @include breakpoint(desktop){
-    padding-right: 120px;
-  }
   .article-ct{
     position: relative;
     padding-top: 30px;
@@ -435,10 +454,11 @@
     ul{
       margin-top: 30px;
       margin-bottom: 30px;
+      margin-left: 15px;
       li{
         position: relative;
-        padding-left: 20px;
         margin-bottom: 10px;
+        list-style: disc;
         &:before{
           display: block;
           width: 10px;
@@ -479,8 +499,8 @@
   }
   .article-author{
     position: relative;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     &:before, &:after{
       height: 2px;
       display: block;
@@ -496,8 +516,8 @@
     }
   }
   .social-network{
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     .social{
       margin-top: 30px;
       margin-bottom: 0px;
