@@ -16661,7 +16661,7 @@ footer .sociallink {
     margin-bottom: 30px; }
   .clientinsider__img img {
     width: 100%;
-    max-height: 500px;
+    height: 100%;
     object-position: center;
     object-fit: cover;
     height: 100%; }
