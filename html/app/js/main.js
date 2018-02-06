@@ -52,9 +52,10 @@ jQuery.noConflict();
 					slideMargin: '0',
 				});
 				$('.bxslider-project').bxSlider({
-					minSlides: "4",
+					minSlides: "1",
 					maxSlides: "4",
 					slideWidth:'300',
+					slideMargin: '10',
 				});
 			},
 
