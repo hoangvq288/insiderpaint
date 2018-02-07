@@ -7,6 +7,7 @@
         <?php 
         $the_query = new WP_Query(array( 'post_type' => 'doi-tac',
                  'posts_per_page' => 10 ,
+                 'post_status' => 'publish',
                  'orderby' => 'date',
                  'order' => 'DESC'));
              while ($the_query->have_posts()) {

@@ -6,47 +6,34 @@
       </a>
     </li>
     <li>
-      <a href="<?php echo get_permalink(get_page_by_path('gioi-thieu')->ID) ?>" class="nav__link">
+      <a href="<?php echo get_permalink(get_page_by_path('gioi-thieu')->ID); ?>" class="nav__link">
         Giới thiệu
       </a>
     </li>
     <li>
-      <a href="<?php echo get_permalink(get_page_by_path('danh-muc-san-pham')->ID) ?>" class="nav__link">
+      <a href="<?php echo get_permalink(get_page_by_path('danh-muc-san-pham')->ID); ?>" class="nav__link">
         Danh Mục Sản Phẩm
       </a>
       <input type="checkbox">
       <span class="status"></span>
       <ul>
-        <li>
-          <a href="#">
-            Sản Phẩm 1
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Sản Phẩm 2
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Sản Phẩm 3
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Sản Phẩm 4
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Sản Phẩm 4
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Sản Phẩm 6
-          </a>
-        </li>
+        <?php
+          $the_query = new WP_Query(array(
+            'post_type' => 'san-pham',
+            'post_status' => 'publish',
+            'posts_per_page' => '15',
+            'orderby' => 'date',
+            'order' => 'ASC',
+          ));
+           while ($the_query->have_posts()) {
+                 $the_query->the_post();
+        ?>
+          <li>
+            <a href="<?php echo get_permalink(get_the_ID()); ?>">
+              <?php the_title() ;?>
+            </a>
+          </li>
+        <?php } wp_reset_postdata();?>
       </ul>
     </li>
     <li>
@@ -62,12 +49,12 @@
           </a>
         </li>
         <li>
-          <a href="<?php echo get_permalink(get_page_by_path('tin-tuc')->ID) ?>" class="nav__link">
+          <a href="<?php echo get_permalink(get_page_by_path('tin-tuc-su-kien')->ID) ?>" class="nav__link">
              Tin tức sự kiện
           </a>
         </li>
         <li>
-          <a href="javascript:;">
+          <a href="<?php echo get_permalink(get_page_by_path('thong-cao-bao-chi')->ID); ?>" class="nav__link">
              Thông cáo báo chí
           </a>
         </li>
@@ -81,17 +68,17 @@
       <span class="status"></span>
       <ul>
         <li>
-          <a href="javascript:;">
-             Công trình tiêu biểu
+          <a href="<?php echo get_permalink(get_page_by_path('du-an-tieu-bieu')->ID); ?>" class="nav__link">
+             Dự án tiêu biểu
           </a>
         </li>
         <li>
-          <a href="<?php echo get_permalink(get_page_by_path('mau-son-tao-cam-hung')->ID) ?>" class="nav__link">
+          <a href="<?php echo get_permalink(get_page_by_path('mau-son-tao-cam-hung')->ID); ?>" class="nav__link">
              Mẫu sơn nghệ thuật tạo cảm hứng
           </a>
         </li>
         <li>
-          <a href="javascript:;">
+          <a href="<?php echo get_permalink(get_page_by_path('doi-tac-chien-luoc')->ID); ?>" class="nav__link">
              Đối tác
           </a>
         </li>
@@ -105,12 +92,12 @@
       <span class="status"></span>
       <ul>
         <li>
-          <a href="javascript:;">
+          <a href="<?php echo get_permalink(get_page_by_path('tuyen-dung-nghe-nghiep')->ID); ?>" class="nav__link">
              Tuyển dụng nghề nghiệp
           </a>
         </li>
         <li>
-          <a href="javascript:;">
+          <a href="<?php echo get_permalink(get_page_by_path('co-hoi-hop-tac')->ID); ?>" class="nav__link">
              Cơ hội hợp tác
           </a>
         </li>

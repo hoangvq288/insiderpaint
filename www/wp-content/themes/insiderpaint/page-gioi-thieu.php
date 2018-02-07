@@ -8,18 +8,14 @@
  */
 
 get_header(); ?>
-<section class="banner banner__sub">
-      <h2 class="title title__line">
-        Giới thiệu
-      </h2>
-      <div class="banner__slider">
-        <ul class="bxslider">
-          <li>
-            <img src="<?php the_field('hinh_dai_dien') ?>" alt="">
-          </li>
-        </ul>
-      </div>
-    </section>
+<section class="banner banner__news">
+  <h2 class="title title__line">
+    Giới thiệu
+  </h2>
+  <div class="banner__slider">
+    <img src="<?php the_field('hinh_dai_dien') ?>" alt="">
+  </div>
+</section>
     <div class="main-content">
       <section class="aboutus">
         <div class="container">
@@ -43,7 +39,7 @@ get_header(); ?>
           <div class="row">
             <div class="col-lg-12">
               <h3 class="title title__line">
-                Tin Tức Và sự kiện
+                GIÁ TRỊ CỐT LÕI
               </h3>
             </div>
             <div class="col-lg-4 col-12">
@@ -88,7 +84,7 @@ get_header(); ?>
                   <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_tinhthan_1.jpg" alt="">
                 </div>
                 <div class="insider__des">
-                  <h4>SÁNG TẠO & VƯỢT QUA THỬ THÁCH</h4>
+                  <h4>SÁNG TẠO </br>& VƯỢT QUA THỬ THÁCH</h4>
                   <p>
                     Công việc đòi hỏi mỗi thành viên phải luôn sáng tạo và tìm cách vượt qua những thử thách trong công việc nhằm mang lại sự hài lòng cho khách hàng.
                   </p>

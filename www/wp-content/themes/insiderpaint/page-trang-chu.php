@@ -69,6 +69,7 @@ get_header(); ?>
         <?php 
           $the_query_feature_post = new WP_Query(array(
             'post_type' => 'tin-tuc',
+            'post_status' => 'publish',
             'meta_query' => array(
               'relation'    => 'AND',
               array(
@@ -77,7 +78,7 @@ get_header(); ?>
                   'compare'   => '=',
               ),
             ),
-            'orderby' => 'date',
+            'orderby' => 'modified',
             'order' => 'DESC',
             'posts_per_page' => '1'
           ));
@@ -93,14 +94,14 @@ get_header(); ?>
               <img src="<?php echo $feature_image_url ?>" alt="">
             </div>
             <div class="news__title">
-              <a href="#" class="news__title--link">
+              <a href="<?php echo get_permalink(get_the_ID()); ?>" class="news__title--link">
                 <?php the_title(); ?>
               </a>
               <span class="news__date">
                 <?php the_date(); ?>
               </span>
               <p class="news__des">
-                <?php echo wp_trim_words(get_the_content(), 45, '...'); ?>
+                <?php echo wp_trim_words(get_field('mo_ta'), 45, '...'); ?>
               </p>
             </div>
           </div>
@@ -112,6 +113,7 @@ get_header(); ?>
               <?php
                 $the_query = new WP_Query(array(
                   'post_type' => 'tin-tuc',
+                  'post_status' => 'publish',
                   'meta_query' => array(
                     'relation'    => 'AND',
                     array(
@@ -126,7 +128,7 @@ get_header(); ?>
                   'posts_per_page' => '4',
                   'orderby' => array( 
                     'query_one' => 'ASC',
-                    'date' => 'DESC'
+                    'modified' => 'DESC'
                   ),
                   
                 ));
@@ -141,16 +143,16 @@ get_header(); ?>
                     <img src="<?php echo $image_url ?>" alt="" height="159px">
                   </div>
                   <div class="news__title">
-                    <a href="#" class="news__title--link">
+                    <a href="<?php echo get_permalink(get_the_ID()); ?>" class="news__title--link">
                       <?php the_title(); ?>
                     </a>
                     <span class="news__date">
                       <?php echo get_the_date(); ?>
                     </span>
                     <p class="news__des">
-                      <?php echo wp_trim_words(get_the_content(), 20, '...'); ?>
+                      <?php echo wp_trim_words(get_field('mo_ta'), 20, '...'); ?>
                     </p>
-                    <a href="#" class="btn btn-primary">
+                    <a href="<?php echo get_permalink(get_the_ID()); ?>" class="btn btn-primary">
                       Xem Thêm
                     </a>
                   </div>
@@ -177,7 +179,7 @@ get_header(); ?>
             <p>
               <?php echo wp_trim_words(get_field('mo_ta_danh_muc_san_pham'), 50, '...'); ?>
             </p>
-            <a href="#" class="btn btn-primary">
+            <a href="<?php echo get_permalink(get_page_by_path('danh-muc-san-pham')->ID); ?>" class="btn btn-primary">
               Xem Thêm
             </a>
         </li>
@@ -192,7 +194,7 @@ get_header(); ?>
             <p>
               <?php echo wp_trim_words(get_field('mo_ta_du_an_tieu_bieu'), 50, '...'); ?>
             </p>
-            <a href="#" class="btn btn-primary">
+            <a href="<?php echo get_permalink(get_page_by_path('du-an-tieu-bieu')->ID); ?>" class="btn btn-primary">
               Xem Thêm
             </a>
         </li>
@@ -207,7 +209,7 @@ get_header(); ?>
             <p>
               <?php echo wp_trim_words(get_field('mo_ta_mau_son_tao_cam_hung'), 50, '...'); ?>
             </p>
-            <a href="#" class="btn btn-primary">
+            <a href="<?php echo get_permalink(get_page_by_path('mau-son-tao-cam-hung')->ID); ?>" class="btn btn-primary">
               Xem Thêm
             </a>
         </li>

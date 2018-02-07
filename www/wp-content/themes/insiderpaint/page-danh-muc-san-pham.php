@@ -8,6 +8,7 @@
  */
 
 get_header(); ?>
+
 <section class="banner banner__sub">
   <h2 class="title title__line">
     Danh mục sản phẩm
@@ -15,9 +16,11 @@ get_header(); ?>
   <div class="banner__slider">
     <ul class="bxslider">
       <?php 
-        $images = get_field('slider');
+        $images = get_field('slider1');
+        echo $images;
         if( $images ): ?>
             <?php foreach( $images as $id=>$image ): ?>
+              <?php echo $image ?>
                  <li>
                     <img src="<?php echo $image['url']?>" alt="">
                   </li>
@@ -25,172 +28,44 @@ get_header(); ?>
       <?php endif; ?>
     </ul>
   </div>
-
-
-
-
 </section>
+
 <div class="main-content">
   <section class="product">
     <div class="container">
       <ul class="row">
-        <li class="product__list col-lg-4 col-12">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_pd_1.jpg" alt="">
+        <?php
+          $the_query = new WP_Query(array(
+            'post_type' => 'san-pham',
+            'posts_per_page' => '15',
+            'orderby' => 'date',
+            'order' => 'ASC'
+          ));
+           while ($the_query->have_posts()) {
+                 $the_query->the_post();
+        ?>
+          <li class="product__list col-lg-4 col-12">
+            <div class="product__listct">
+              <?php $post_image_url = get_the_post_thumbnail_url(get_the_ID()); ?>
+              <?php $image_url = $post_image_url ? $post_image_url :  (get_bloginfo('template_directory').'/images/img_pd_4.jpg') ?>
+              <div class="product__img">
+                <img src="<?php echo $image_url ?>" alt="" height="244px">
+              </div>
+              <div class="product__des">
+                <h4>
+                  <a href="<?php echo get_permalink(get_the_ID()); ?>">
+                    <?php the_title(); ?>
+                  </a>
+                </h4>
+                <p>
+                  <?php echo wp_trim_words(get_field('mo_ta'), 30, '...'); ?>
+                </p>
+              </div>
             </div>
-            <div class="product__des">
-              <h4>FINITURE DECORATIVE</h4>
-              <p>
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_pd_2.jpg" alt="">
-            </div>
-            <div class="product__des">
-              <h4>FINITURE DECORATIVE</h4>
-              <p>
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_pd_3.jpg" alt="">
-            </div>
-            <div class="product__des">
-              <h4>FINITURE DECORATIVE</h4>
-              <p>
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_pd_4.jpg" alt="">
-            </div>
-            <div class="product__des">
-              <h4>FINITURE DECORATIVE</h4>
-              <p>
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_pd_5.jpg" alt="">
-            </div>
-            <div class="product__des">
-              <h4>FINITURE DECORATIVE</h4>
-              <p>
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_pd_6.jpg" alt="">
-            </div>
-            <div class="product__des">
-              <h4>FINITURE DECORATIVE</h4>
-              <p>
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_pd_1.jpg" alt="">
-            </div>
-            <div class="product__des">
-              <h4>FINITURE DECORATIVE</h4>
-              <p>
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_pd_2.jpg" alt="">
-            </div>
-            <div class="product__des">
-              <h4>FINITURE DECORATIVE</h4>
-              <p>
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_pd_3.jpg" alt="">
-            </div>
-            <div class="product__des">
-              <h4>FINITURE DECORATIVE</h4>
-              <p>
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_pd_4.jpg" alt="">
-            </div>
-            <div class="product__des">
-              <h4>FINITURE DECORATIVE</h4>
-              <p>
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_pd_5.jpg" alt="">
-            </div>
-            <div class="product__des">
-              <h4>FINITURE DECORATIVE</h4>
-              <p>
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
-              </p>
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_pd_6.jpg" alt="">
-            </div>
-            <div class="product__des">
-              <h4>FINITURE DECORATIVE</h4>
-              <p>
-                Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng
-              </p>
-            </div>
-          </div>
-        </li>
+          </li>
+        <?php } wp_reset_postdata();?>
       </ul>
+      
       
     </div>
     </div>

@@ -397,12 +397,116 @@ if (!function_exists('thu_vien_tai_lieu_init')) {
 add_action( 'init', 'thu_vien_tai_lieu_init' );
 
 
+
+
+if (!function_exists('mau_son_tao_cam_hung_init')) {
+   /**
+    * Register a director post type.
+    *
+    * @link http://codex.wordpress.org/Function_Reference/register_post_type
+    */
+   function mau_son_tao_cam_hung_init()
+   {
+       $labels = array(
+           'name' => _x('Mẫu sơn cảm hứng', 'post type general name'),
+           'singular_name' => _x('Mẫu sơn cảm hứng', 'post type singular name'),
+           'menu_name' => _x('Mẫu sơn cảm hứng', 'admin menu'),
+           'name_admin_bar' => _x('Mẫu sơn cảm hứng', 'add new on admin bar'),
+           'add_new' => _x('Thêm Mẫu sơn cảm hứng', 'Mẫu sơn cảm hứng'),
+           'add_new_item' => __('Thêm Mẫu sơn cảm hứng'),
+           'new_item' => __('Mẫu sơn cảm hứng mới'),
+           'edit_item' => __('Sửa Mẫu sơn cảm hứng'),
+           'view_item' => __('Xem Mẫu sơn cảm hứng'),
+           'all_items' => __('Tất cả Mẫu sơn cảm hứng'),
+           'search_items' => __('Tìm kiếm Mẫu sơn cảm hứng'),
+           'parent_item_colon' => __('Parent Mẫu sơn cảm hứng:'),
+           'not_found' => __('Không tìm thấy Mẫu sơn cảm hứng.'),
+           'not_found_in_trash' => __('Không tìm thấy Mẫu sơn cảm hứng trong Trash.')
+       );
+
+       $args = array(
+           'labels' => $labels,
+           'public' => true,
+           'publicly_queryable' => true,
+           'show_ui' => true,
+           'show_in_nav_menus' => true,
+           'query_var' => true,
+           'rewrite' => array('slug' => 'mau-son-cam-hung','with_front' => false),
+           'capability_type' => 'post',
+           'has_archive' => true,
+           'hierarchical' => true,
+           'menu_position' => 30,
+           'supports' => array('title', 'author')
+       );
+
+       register_post_type('mau-son-cam-hung', $args);
+       flush_rewrite_rules();
+   }
+}
+add_action( 'init', 'mau_son_tao_cam_hung_init' );
+
+
+if (!function_exists('du_an_tieu_bieu_init')) {
+   /**
+    * Register a director post type.
+    *
+    * @link http://codex.wordpress.org/Function_Reference/register_post_type
+    */
+   function du_an_tieu_bieu_init()
+   {
+       $labels = array(
+           'name' => _x('Dự án tiêu biểu', 'post type general name'),
+           'singular_name' => _x('Dự án tiêu biểu', 'post type singular name'),
+           'menu_name' => _x('Dự án tiêu biểu', 'admin menu'),
+           'name_admin_bar' => _x('Dự án tiêu biểu', 'add new on admin bar'),
+           'add_new' => _x('Thêm Dự án tiêu biểu', 'Dự án tiêu biểu'),
+           'add_new_item' => __('Thêm Dự án tiêu biểu'),
+           'new_item' => __('Dự án tiêu biểu mới'),
+           'edit_item' => __('Sửa Dự án tiêu biểu'),
+           'view_item' => __('Xem Dự án tiêu biểu'),
+           'all_items' => __('Tất cả Dự án tiêu biểu'),
+           'search_items' => __('Tìm kiếm Dự án tiêu biểu'),
+           'parent_item_colon' => __('Parent Dự án tiêu biểu:'),
+           'not_found' => __('Không tìm thấy Dự án tiêu biểu.'),
+           'not_found_in_trash' => __('Không tìm thấy Dự án tiêu biểu trong Trash.')
+       );
+
+       $args = array(
+           'labels' => $labels,
+           'public' => true,
+           'publicly_queryable' => true,
+           'show_ui' => true,
+           'show_in_nav_menus' => true,
+           'query_var' => true,
+           'rewrite' => array('slug' => 'du-an','with_front' => false),
+           'capability_type' => 'post',
+           'has_archive' => true,
+           'hierarchical' => true,
+           'menu_position' => 30,
+           'supports' => array('title', 'author', 'editor', 'thumbnail')
+       );
+
+       register_post_type('du-an', $args);
+       flush_rewrite_rules();
+   }
+}
+add_action( 'init', 'du_an_tieu_bieu_init' );
+
+
 if( function_exists('acf_add_options_page') ) {
    acf_add_options_page();
 }
 
 
 
+add_action( 'wp_enqueue_scripts', 'add_my_script' );
+function add_my_script() {
+    wp_enqueue_script(
+        'custom', // name your script so that you can attach other scripts and de-register, etc.
+        get_template_directory_uri() . '/js/custom.js', // this is the location of your script file
+        array('jquery') // this array lists the scripts upon which your script depends
+    );
+}
 
 
 

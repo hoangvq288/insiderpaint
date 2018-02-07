@@ -2,7 +2,7 @@
 /**
  * Theme: Insider Paint
  * 
- * Template Name: Page - Get Inspiration
+ * Template Name: Page - Mẫu sơn cảm hứng
  *
  * @package insiderpaint
  */
@@ -14,9 +14,15 @@ get_header(); ?>
   </h2>
   <div class="banner__slider">
     <ul class="bxslider">
-      <li>
-        <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_banner_get_1.jpg" alt="">
-      </li>
+      <?php 
+        $images = get_field('slider');
+        if( $images ): ?>
+            <?php foreach( $images as $id=>$image ): ?>
+               <li>
+                  <img src="<?php echo $image['url']?>" alt="">
+                </li>
+            <?php endforeach; ?>
+      <?php endif; ?>
     </ul>
   </div>
 </section>

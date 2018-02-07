@@ -13,7 +13,7 @@
           </a>
         </div>
         <?php $phone = get_field('dien_thoai', 'option'); ?>
-        <a href="tel: <?php echo $phone; ?>" class="btn btn-secondary btn-callus">
+        <a href="tel:<?php echo $phone; ?>" class="btn btn-secondary btn-callus">
           <i class="fa fa-mobile-phone"></i>
           <span>CALL US: <?php echo $phone; ?></span>
         </a>
@@ -33,22 +33,30 @@
     <div class="footer__bottom">
       <ul>
         <li>
-          <a href="#">Trang chủ</a>
+          <a href="<?php echo get_home_url(); ?>">
+            Trang chủ
+          </a>
         </li>
         <li>
-          <a href="#">Giới thiệu</a>
+          <a href="<?php echo get_permalink(get_page_by_path('gioi-thieu')->ID); ?>">
+            Giới thiệu
+          </a>
         </li>
         <li>
-          <a href="#">Danh mục sản phẩm</a>
+          <a href="<?php echo get_permalink(get_page_by_path('danh-muc-san-pham')->ID); ?>">
+            Danh mục sản phẩm
+          </a>
         </li>
         <li>
-          <a href="#">Truyền thông</a>
+          <a href="javascript:;">Truyền thông</a>
         </li>
         <li>
-          <a href="#">Dự án tiêu biểu</a>
+          <a href="<?php echo get_permalink(get_page_by_path('du-an-tieu-bieu')->ID); ?>">
+            Dự án tiêu biểu
+          </a>
         </li>
         <li>
-          <a href="">Liên Hệ & Hợp tác</a>
+          <a href="javascript:;">Liên Hệ & Hợp tác</a>
         </li>
       </ul>
       <p>

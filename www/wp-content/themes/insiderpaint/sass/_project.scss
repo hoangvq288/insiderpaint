@@ -31,6 +31,31 @@
     margin-top: 50px;
     overflow: hidden;
     border-top: 5px solid $main-color-primary;
+    .title + span{
+      margin-bottom: 20px;
+    }
+    ul.bxslider{
+      margin-bottom: 15px;
+      li{
+        display: flex;
+        justify-content: center;
+        img{
+          object-position: center;
+          object-fit: cover;
+          height: 500px;
+          max-width: 100%;
+        }
+      }
+    }
+    .bx-next {
+      right: -31px !important;
+    }
+    .bx-prev {
+      left: -31px !important;
+    }
+  }
+  &__des{
+    padding-top: 30px;
   }
 }
 

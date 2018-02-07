@@ -141,26 +141,26 @@ body{
     box-shadow: inset 0px 3px 7px 0px rgba(140, 146, 173, 0.2);
     line-height: 18px;
     font-size: 12px;
-    background: $main-color-second-light;
+    background: #e5e5e5;
     /* do not group these rules */
   }
   *::-webkit-input-placeholder {
-      color: white;
+      color: #000;
       text-transform: normal;
   }
   *:-moz-placeholder {
       /* FF 4-18 */
-      color: white;
+      color: #000;
       text-transform: normal;
   }
   *::-moz-placeholder {
       /* FF 19+ */
-      color: white;
+      color: #000;
       text-transform: normal;
   }
   *:-ms-input-placeholder {
       /* IE 10+ */
-      color: white;
+      color: #000;
       text-transform: normal;
   }
   select{
