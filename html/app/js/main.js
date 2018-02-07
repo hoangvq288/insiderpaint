@@ -31,7 +31,7 @@ jQuery.noConflict();
 				//console.log('hello world');
 				$('.bxslider').bxSlider();
 				$('.bxslider_client').bxSlider({
-					minSlides: "5",
+					minSlides: "1",
 					maxSlides: "5",
 					slideWidth:'210',
 				});
@@ -54,8 +54,8 @@ jQuery.noConflict();
 				$('.bxslider-project').bxSlider({
 					minSlides: "1",
 					maxSlides: "4",
-					slideWidth:'300',
-					slideMargin: '10',
+					slideWidth:'265',
+					autoControls: true,
 				});
 			},
 

@@ -53,8 +53,21 @@
   padding-bottom: 30px;
 }
 
+
+.featured-article{
+  + .sub-article{
+    .col-right{
+      margin-top: 0px;
+    }
+  }
+}
 .sub-article{
-  margin-top: -60px;
+  .article-detail{
+    margin-top: -60px;
+  }
+  .col-right{
+    margin-top: -110px;
+  }
   &.news{
     .article-content{
       padding-left: 0px;
@@ -69,7 +82,7 @@
     }
   }
   img{
-    width: 100% !important;
+    width: auto !important;
     max-width: 100% !important;
     object-fit: cover;
     object-position: center;

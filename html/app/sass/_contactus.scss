@@ -76,7 +76,6 @@
   .map-info{
     display: flex;
     align-items: flex-start;
-    padding-left: 100px;
     .title{
       margin-bottom: 25px;
     }
@@ -105,5 +104,17 @@
     .title{
       margin-bottom: 15px;
     }
+  }
+}
+
+.welcome-text{
+  margin-top: 50px;
+  text-align: center;
+  img{
+    margin-bottom: 10px;
+  }
+  blockquote{
+    font-size: 18px;
+    font-weight: 700;
   }
 }
