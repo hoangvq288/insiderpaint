@@ -11,7 +11,7 @@ get_header(); ?>
   <h2 class="title title__line">
     Hợp tác
   </h2>
-  <div class="banner__slider">
+  <div class="banner-one">
     <img src="<?php the_field('banner'); ?>" alt="">
   </div>
 </section>
@@ -45,7 +45,7 @@ get_header(); ?>
                                   </li>
                                </ul>
                                <div class="article-des">
-                                 <?php echo wp_trim_words(get_the_content(), 50, '...'); ?>
+                                 <?php echo wp_trim_words(get_the_content(), 120, '...'); ?>
                                </div>
                                <a href="<?php echo get_permalink(get_the_ID()); ?>" class="btn btn-link">
                                   Xem thêm

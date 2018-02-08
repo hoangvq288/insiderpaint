@@ -12,7 +12,7 @@ get_header(); ?>
   <h2 class="title title__line">
     Giới thiệu
   </h2>
-  <div class="banner__slider">
+  <div class="banner-one">
     <img src="<?php the_field('hinh_dai_dien') ?>" alt="">
   </div>
 </section>

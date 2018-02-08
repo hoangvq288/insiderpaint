@@ -10,9 +10,9 @@ get_header(); ?>
 
 <section class="banner banner__news">
   <h2 class="title title__line">
-    Tin Tức Và Sự Kiện
+    Tin Tức Sự Kiện
   </h2>
-  <div class="banner__slider">
+  <div class="banner-one">
     <img src="<?php the_field('banner'); ?>" alt="">
   </div>
 </section>

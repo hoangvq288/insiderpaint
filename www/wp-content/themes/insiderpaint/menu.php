@@ -44,7 +44,7 @@
       <span class="status"></span>
       <ul>
         <li>
-          <a href="javascript:;">
+          <a href="<?php echo get_permalink(get_page_by_path('thu-vien')->ID) ?>" class="nav__link">
              Thư viện tài liệu
           </a>
         </li>
@@ -102,7 +102,7 @@
           </a>
         </li>
         <li>
-          <a href="javascript:;">
+          <a href="<?php echo get_permalink(get_page_by_path('lien-he')->ID); ?>" class="nav__link">
              Liên hệ
           </a>
         </li>

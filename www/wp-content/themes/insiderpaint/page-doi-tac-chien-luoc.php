@@ -11,7 +11,7 @@ get_header(); ?>
   <h2 class="title title__line">
     Đối tác
   </h2>
-  <div class="banner__slider">
+  <div class="banner-one">
     <img src="<?php the_field('banner'); ?>" alt="">
   </div>
 </section>
@@ -32,11 +32,15 @@ get_header(); ?>
            while ($the_query->have_posts()) {
                  $the_query->the_post();
         ?>
-          <li class="product__list col-lg-4 col-12">
+          <li class="product__list col-lg-3 col-12">
             <div class="product__listct">
               <div class="product__img">
                 <img src="<?php echo get_the_post_thumbnail_url(get_the_ID()); ?>" alt="">
               </div>
+            <div class="product__des">
+              <h4><?php the_title(); ?></h4>
+            </div>
+              
             </div>
           </li>
         <?php } wp_reset_postdata(); ?>

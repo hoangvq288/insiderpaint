@@ -13,20 +13,8 @@ get_header(); ?>
   <h2 class="title title__line">
     Danh mục sản phẩm
   </h2>
-  <div class="banner__slider">
-    <ul class="bxslider">
-      <?php 
-        $images = get_field('slider1');
-        echo $images;
-        if( $images ): ?>
-            <?php foreach( $images as $id=>$image ): ?>
-              <?php echo $image ?>
-                 <li>
-                    <img src="<?php echo $image['url']?>" alt="">
-                  </li>
-            <?php endforeach; ?>
-      <?php endif; ?>
-    </ul>
+  <div class="banner-one">
+    <img src="<?php the_field('banner'); ?>" alt="">
   </div>
 </section>
 
@@ -58,7 +46,7 @@ get_header(); ?>
                   </a>
                 </h4>
                 <p>
-                  <?php echo wp_trim_words(get_field('mo_ta'), 30, '...'); ?>
+                  <?php echo wp_trim_words(get_field('mo_ta'), 45, '...'); ?>
                 </p>
               </div>
             </div>

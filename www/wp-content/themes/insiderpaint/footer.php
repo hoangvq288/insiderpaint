@@ -56,7 +56,9 @@
           </a>
         </li>
         <li>
-          <a href="javascript:;">Liên Hệ & Hợp tác</a>
+          <a href="<?php echo get_permalink(get_page_by_path('lien-he')->ID); ?>" class="nav__link">
+            Liên Hệ & Hợp tác
+          </a>
         </li>
       </ul>
       <p>
@@ -108,6 +110,7 @@
   <script src="<?php echo get_bloginfo('template_directory'); ?>/js/_2.bootstrap.js"></script>
   <!-- <script src="js/jquery.bxslider.min.js"></script> -->
   <script src="<?php echo get_bloginfo('template_directory'); ?>/js/main.js"></script>
+  
   <?php wp_footer(); ?>
   <!--Start of Tawk.to Script-->
 <script type="text/javascript">
