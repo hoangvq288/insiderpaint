@@ -573,5 +573,13 @@ function fetch_modal_content() {
 }
 add_action( 'wp_ajax_fetch_modal_content', 'fetch_modal_content' );
 add_action( 'wp_ajax_nopriv_fetch_modal_content', 'fetch_modal_content' );
+//GLOBAL VAR
+$ITEMS_PER_PAGE_FOR_NEWS = 5;
+$SIDEBAR_ITEMS_PER_QUERY = 5;
+$ITEMS_PER_PAGE_FOR_NORMAL_POST = 10;
+$ITEMS_PER_PAGE_FOR_INSPIRATION = 15;
+$ITEMS_PER_PAGE_FOR_PRODUCTS = 12;
+$ITEMS_PER_PAGE_FOR_LIBRARY = 12;
+$ITEMS_PER_PAGE_FOR_PARTNERS = 12;
 
 

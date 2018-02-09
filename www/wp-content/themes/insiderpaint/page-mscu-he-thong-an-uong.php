@@ -63,7 +63,7 @@ get_header(); ?>
           $the_query = new WP_Query(array(
             'post_type' => 'mau-son-cam-hung',
             'post_status' => 'publish',
-            'posts_per_page' => '12',
+            'posts_per_page' => $ITEMS_PER_PAGE_FOR_INSPIRATION,
             'paged' => $paged,
             'meta_query' => array(
               'relation'    => 'AND',

@@ -35,14 +35,6 @@ get_header(); ?>
                  <button class="btn btn-primary" onclick='javascript:history.back()'>Trở Về</button>
               </div>
               <div class="col-lg-3 col-right">
-                       <div class="section-sidebar search">
-                          <div class="sidebar-title">
-                             <input type="text" class="form-control" placeholder="SEARCH">
-                             <a href="#">
-                                <i class="fa fa-search"></i>
-                             </a>
-                          </div>
-                       </div>
                        <?php get_template_part('sidebar_social'); ?>
                        <div class="section-sidebar popular">
                           <div class="sidebar-title">

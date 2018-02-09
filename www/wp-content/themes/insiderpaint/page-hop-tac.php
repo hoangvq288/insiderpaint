@@ -23,13 +23,14 @@ get_header(); ?>
                  <div class="sub-article row">
                     <div class="col-lg-9 col-left">
                       <?php
+                          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                           $the_query = new WP_Query(array(
                             'post_type' => 'hop-tac',
                             'post_status' => 'publish',
-                            'posts_per_page' => '10',
+                            'posts_per_page' => $ITEMS_PER_PAGE_FOR_NORMAL_POST,
+                            'paged' => $paged,
                             'orderby' => array( 
-                              'query_one' => 'ASC',
-                              'modified' => 'DESC'
+                              'date' => 'DESC'
                             ),
                             
                           ));
@@ -53,50 +54,13 @@ get_header(); ?>
                             </div>
                          </article>
                        <?php } wp_reset_postdata(); ?>
-                       <div class="paging">
-                          <ul>
-                            <li class="prev__btn">
-                                <a href="">
-                                   <i class="fa fa-angle-left"></i>
-                                   Prev
-                                </a>
-                             </li>
-                             <li class="active">
-                                <a href="">1</a>
-                             </li>
-                             <li>
-                                <a href="">2</a>
-                             </li>
-                             <li>
-                                <a href="">3</a>
-                             </li>
-                             <li>
-                                <a href="">4</a>
-                             </li>
-                             <li>
-                                <a href="">...</a>
-                             </li>
-                             <li>
-                                <a href="">10</a>
-                             </li>
-                             <li class="next__btn">
-                                <a href="">
-                                   Next
-                                   <i class="fa fa-angle-right"></i>
-                                </a>
-                             </li>
-                          </ul>
-                      </div>
+                       <?php
+                          kriesi_pagination($the_query->max_num_pages);
+                          wp_reset_query();
+                       ?>
+
                     </div>
                     <div class="col-lg-3 col-right">
-                       <div class="section-sidebar search">
-                          <div class="sidebar-title">
-                             <input type="text" class="form-control" placeholder="SEARCH">
-                             <a href="#">
-                                <i class="fa fa-search"></i>
-                             </a>
-                          </div>
-                       </div>
                        <?php get_template_part('sidebar_social'); ?>
                        <div class="section-sidebar popular">
                           <div class="sidebar-title">
@@ -108,9 +72,8 @@ get_header(); ?>
                                   $the_query = new WP_Query(array(
                                     'post_type' => 'hop-tac',
                                     'post_status' => 'publish',
-                                    'posts_per_page' => '10',
+                                    'posts_per_page' => SIDEBAR_ITEMS_PER_QUERY,
                                     'orderby' => array( 
-                                      'query_one' => 'ASC',
                                       'date' => 'DESC'
                                     ),
                                     

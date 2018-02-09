@@ -63,7 +63,7 @@ get_header(); ?>
           $the_query = new WP_Query(array(
             'post_type' => 'mau-son-cam-hung',
             'post_status' => 'publish',
-            'posts_per_page' => '12',
+            'posts_per_page' => $ITEMS_PER_PAGE_FOR_INSPIRATION,
             'paged' => $paged,
             'meta_query' => array(
               'relation'    => 'AND',
@@ -115,7 +115,7 @@ get_header(); ?>
                   </div>
                   <div class="ispdetail__des">
                     <h4><?php the_title(); ?></h4>
-                    <?php echo wp_trim_words(the_field('mo_ta'), 120, '...'); ?>
+                    <?php echo wp_trim_words(the_field('mo_ta'), 200, '...'); ?>
                   </div>
                 </div>
                 <div class="modal-footer">

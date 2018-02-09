@@ -27,7 +27,7 @@ get_header(); ?>
                           $the_query = new WP_Query(array(
                             'post_type' => 'tuyen-dung',
                             'post_status' => 'publish',
-                            'posts_per_page' => '10',
+                            'posts_per_page' => $ITEMS_PER_PAGE_FOR_NORMAL_POST,
                             'paged' => $paged,
                             'orderby' => array( 
                               'query_one' => 'ASC',
@@ -61,14 +61,6 @@ get_header(); ?>
                         ?>
                     </div>
                     <div class="col-lg-3 col-right">
-                       <div class="section-sidebar search">
-                          <div class="sidebar-title">
-                             <input type="text" class="form-control" placeholder="SEARCH">
-                             <a href="#">
-                                <i class="fa fa-search"></i>
-                             </a>
-                          </div>
-                       </div>
                        <?php get_template_part('sidebar_social'); ?>
                        <div class="section-sidebar popular">
                           <div class="sidebar-title">
@@ -80,7 +72,7 @@ get_header(); ?>
                                   $the_query = new WP_Query(array(
                                     'post_type' => 'tuyen-dung',
                                     'post_status' => 'publish',
-                                    'posts_per_page' => '10',
+                                    'posts_per_page' => $SIDEBAR_ITEMS_PER_QUERY,
                                     'orderby' => array( 
                                       'query_one' => 'ASC',
                                       'date' => 'DESC'

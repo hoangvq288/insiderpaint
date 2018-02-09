@@ -23,9 +23,11 @@ get_header(); ?>
     <div class="container">
       <ul class="row">
         <?php
+          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
           $the_query = new WP_Query(array(
             'post_type' => 'san-pham',
-            'posts_per_page' => '15',
+            'posts_per_page' => $ITEMS_PER_PAGE_FOR_PRODUCTS,
+            'paged' => $paged,
             'orderby' => 'date',
             'order' => 'ASC'
           ));
@@ -52,6 +54,11 @@ get_header(); ?>
             </div>
           </li>
         <?php } wp_reset_postdata();?>
+        <?php
+            kriesi_pagination($the_query->max_num_pages);
+            wp_reset_query();
+         ?>
+
       </ul>
       
       

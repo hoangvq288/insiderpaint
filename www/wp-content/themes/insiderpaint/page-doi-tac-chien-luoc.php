@@ -20,9 +20,12 @@ get_header(); ?>
     <div class="container">
       <ul class="row">
         <?php
+          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
           $the_query = new WP_Query(array(
             'post_type' => 'doi-tac',
             'post_status' => 'publish',
+            'posts_per_page' => $ITEMS_PER_PAGE_FOR_PARTNERS,
+            'paged' => $paged,
             'orderby' => array( 
               'query_one' => 'ASC',
               'date' => 'DESC'
@@ -44,11 +47,16 @@ get_header(); ?>
             </div>
           </li>
         <?php } wp_reset_postdata(); ?>
+        <?php
+            kriesi_pagination($the_query->max_num_pages);
+            wp_reset_query();
+         ?>
+
         </li>
       </ul>
     </div>
     </div>
   </section>
-  <?php get_template_part('section_client'); ?>
+  
 </div>
 <?php get_footer(); ?>

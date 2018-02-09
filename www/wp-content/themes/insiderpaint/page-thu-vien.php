@@ -20,11 +20,13 @@ get_header(); ?>
     <div class="container">
       <ul class="row">
         <?php
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
           $the_query = new WP_Query(array(
             'post_type' => 'thu-vien-tai-lieu',
             'post_status' => 'publish',
+            'posts_per_page' => $ITEMS_PER_PAGE_FOR_LIBRARY,
+            'paged' => $paged,
             'orderby' => array( 
-              'query_one' => 'ASC',
               'date' => 'DESC'
             ),
             
@@ -49,6 +51,11 @@ get_header(); ?>
             </div>
           </li>
         <?php } wp_reset_postdata(); ?>
+        <?php
+          kriesi_pagination($the_query->max_num_pages);
+          wp_reset_query();
+       ?>
+
         </li>
       </ul>
     </div>

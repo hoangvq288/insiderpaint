@@ -84,7 +84,7 @@ get_header(); ?>
                                   'key' => 'order_number',
                               ),
                             ),
-                            'posts_per_page' => '5',
+                            'posts_per_page' => $ITEMS_PER_PAGE_FOR_NEWS,
                             'paged' => $paged,
                             'orderby' => array( 
                               'query_one' => 'ASC',
@@ -125,14 +125,6 @@ get_header(); ?>
 
                     </div>
                     <div class="col-lg-3 col-right">
-                       <div class="section-sidebar search">
-                          <div class="sidebar-title">
-                             <input type="text" class="form-control" placeholder="SEARCH">
-                             <a href="#">
-                                <i class="fa fa-search"></i>
-                             </a>
-                          </div>
-                       </div>
                        <?php get_template_part('sidebar_social'); ?>
                        <?php get_template_part('sidebar_bai_viet_tieu_bieu'); ?>
                     </div>

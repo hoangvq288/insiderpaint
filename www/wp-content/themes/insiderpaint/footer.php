@@ -48,7 +48,9 @@
           </a>
         </li>
         <li>
-          <a href="javascript:;">Truyền thông</a>
+          <a href="<?php echo get_permalink(get_page_by_path('thong-cao-bao-chi')->ID); ?>">
+            Truyền thông
+          </a>
         </li>
         <li>
           <a href="<?php echo get_permalink(get_page_by_path('du-an-tieu-bieu')->ID); ?>">

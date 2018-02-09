@@ -18,8 +18,7 @@
                   ),
                   'orderby' => 'modified',
                   'order' => 'DESC',
-                  'posts_per_page' => '5'
-                  
+                  'posts_per_page' => $SIDEBAR_ITEMS_PER_QUERY
                 ));
              while ($the_query->have_posts()) {
                    $the_query->the_post();
