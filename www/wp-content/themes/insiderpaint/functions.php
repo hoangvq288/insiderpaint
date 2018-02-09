@@ -436,7 +436,7 @@ if (!function_exists('mau_son_tao_cam_hung_init')) {
            'has_archive' => true,
            'hierarchical' => true,
            'menu_position' => 30,
-           'supports' => array('title', 'author')
+           'supports' => array('title', 'author', 'thumbnail')
        );
 
        register_post_type('mau-son-cam-hung', $args);
@@ -509,5 +509,69 @@ function add_my_script() {
 }
 
 
+function kriesi_pagination($pages = '', $range = 2)
+{
+    $showitems = ($range * 2)+1;
+    global $paged;
+    if(empty($paged)) $paged = 1;
+    if($pages == '')
+    {
+        global $wp_query;
+        $pages = $wp_query->max_num_pages;
+        if(!$pages)
+        {
+            $pages = 1;
+        }
+    }
+    if(1 != $pages)
+    {
+        echo '<div class="paging">';
+        echo '<ul>';
+        if($paged > 1) echo "<li class='prev__btn'><a href='".get_pagenum_link($paged - 1)."'><i class='fa fa-angle-left'></i> Trước</a></li>";
+
+        for ($i=1; $i <= $pages; $i++)
+        {
+            if (1 != $pages &&( !($i >= $paged+$range+1 || $i <= $paged-$range-1) || $pages <= $showitems ))
+            {
+                echo ($paged == $i)? "<li class='active'><a href='".get_pagenum_link($i)."' class='inactive' >".$i."</a></li>":"<li><a href='".get_pagenum_link($i)."' >".$i."</a></li>";
+            }
+        }
+        if ($paged < $pages) echo "<li class='next__btn'><a href='".get_pagenum_link($paged + 1)."'>Sau <i class='fa fa-angle-right'></i></a></li>";
+        echo '</ul>';
+        echo '</div>';
+    }
+}
+
+
+function template_chooser($template)   
+{    
+  global $wp_query;   
+  $post_type = get_query_var('post_type');   
+  if( $wp_query->is_search && $post_type == 'san-pham' )   
+  {
+    return locate_template('search.php');  //  redirect to archive-search.php
+  }   
+  return $template;   
+}
+add_filter('template_include', 'template_chooser');    
+
+
+
+function fetch_modal_content() {
+  if ( isset($_REQUEST) ) {
+    $post_id = $_REQUEST['id'];
+  ?>
+
+    <div class="modal-body">
+      <h1><?php echo get_the_title($post_id); ?></h1>
+      <?php echo wpautop(get_the_content($post_id)); ?>
+    </div>
+
+  <?php
+  }
+  die();
+}
+add_action( 'wp_ajax_fetch_modal_content', 'fetch_modal_content' );
+add_action( 'wp_ajax_nopriv_fetch_modal_content', 'fetch_modal_content' );
 
 

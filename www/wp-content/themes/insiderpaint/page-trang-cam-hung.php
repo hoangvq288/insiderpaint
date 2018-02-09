@@ -30,10 +30,13 @@ get_header(); ?>
   <div class="tab-inspiration">
     <ul>
       <li class="active">
-        <a href="#">Căn hộ</a>
+        <a href="<?php echo get_permalink(get_page_by_path('mau-son-tao-cam-hung/can-ho')->ID); ?>" class="nav__link">
+        Căn hộ</a>
       </li>
       <li>
-        <a href="#">Hệ thống ăn uống</a>
+        <a href="<?php echo get_permalink(get_page_by_path('mau-son-tao-cam-hung/he-thong-an-uong')->ID); ?>" class="nav__link">
+        Hệ thống ăn uống
+      </a>
       </li>
       <li>
         <a href="#">Văn phòng</a>
@@ -49,111 +52,77 @@ get_header(); ?>
   <section class="product">
     <div class="container">
       <ul class="row">
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_1.jpg" alt="">
+        <?php
+          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+          $the_query = new WP_Query(array(
+            'post_type' => 'mau-son-cam-hung',
+            'post_status' => 'publish',
+            'posts_per_page' => '12',
+            'paged' => $paged,
+            'meta_query' => array(
+              'relation'    => 'AND',
+              array(
+                'key'   => 'loai',
+                'value' => 'can_ho',
+                'compare'   => '=',
+              ),
+            ),
+            'orderby' => array( 
+              'date' => 'ASC'
+            ),
+            
+          ));
+           while ($the_query->have_posts()) {
+                 $the_query->the_post();
+        ?>
+          <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail-<?php echo get_the_ID(); ?>">
+            <div class="product__listct">
+              <div class="product__img">
+                <?php $post_image_url = get_the_post_thumbnail_url(get_the_ID()); ?>
+                 <?php $image_url = $post_image_url ? $post_image_url :  (get_bloginfo('template_directory').'/images/img_pd_1.jpg') ?>
+                <img src="<?php echo $image_url ?>" alt="">
+              </div>
+            </div>
+          </li>
+          
+           <div class="modal fade bd-img-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="isp-detail-<?php echo get_the_ID(); ?>">
+            <div class="modal-dialog modal-lg ispdetail">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                   <i class="icofont icofont-ui-close"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="ispdetail__img">
+                    <ul class="bxslider_isp_detail">
+                      <?php 
+                        $images = get_field('slider');
+                        if( $images ): ?>
+                            <?php foreach( $images as $id=>$image ): ?>
+                               <li>
+                                  <img src="<?php echo $image['url']?>" alt="">
+                                </li>
+                            <?php endforeach; ?>
+                      <?php endif; ?>
+                    </ul>
+                  </div>
+                  <div class="ispdetail__des">
+                    <h4><?php the_title(); ?></h4>
+                    <?php echo wp_trim_words(the_field('mo_ta'), 120, '...'); ?>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                 <!--  <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button> -->
+                </div>
+              </div>
             </div>
           </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_2.jpg" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_3.jpg" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_4.jpg" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_5.jpg" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_6.jpg" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_1.jpg" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_2.jpg" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_3.jpg" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_4.jpg" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_5.jpg" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_6.jpg" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_3.jpg" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_4.jpg" alt="">
-            </div>
-          </div>
-        </li>
-        <li class="product__list col-lg-4 col-12" data-toggle="modal" data-target="#isp-detail">
-          <div class="product__listct">
-            <div class="product__img">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/img_pd_5.jpg" alt="">
-            </div>
-          </div>
-        </li>
+        <?php } wp_reset_postdata(); ?>
+        <?php
+          kriesi_pagination($the_query->max_num_pages);
+          wp_reset_query();
+          ?>
       </ul>
     </div>
     </div>
@@ -161,36 +130,6 @@ get_header(); ?>
   <?php get_template_part('section_client'); ?>
 </div>
 
-   <!-- ***********************modal -->
-   <div class="modal fade bd-img-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="isp-detail">
-    <div class="modal-dialog modal-lg ispdetail">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-           <i class="icofont icofont-ui-close"></i>
-          </button>
-        </div>
-        <div class="modal-body">
-          <div class="ispdetail__img">
-            <ul class="bxslider_isp_detail">
-              <li><img src="<?php echo get_bloginfo('template_directory') ?>/images/img_banner_2.jpg" alt=""></li>
-              <li><img src="<?php echo get_bloginfo('template_directory') ?>/images/img_detail_1.jpg" alt=""></li>
-              <li><img src="<?php echo get_bloginfo('template_directory') ?>/images/img_product_detail_1.jpg" alt=""></li>
-              <li><img src="<?php echo get_bloginfo('template_directory') ?>/images/img_banner_2.jpg" alt=""></li>
-            </ul>
-          </div>
-          <div class="ispdetail__des">
-            <h4>FINITURE DECORATIVE</h4>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rutrum mi sit amet lectus luctus, tempor dictum tellus auctor. Fusce elementum est et ligula venenatis, consequat vehicula orci lobortis. Integer ullamcorper nisi at erat molestie lobortis.
-            </p>
-          </div>
-        </div>
-        <div class="modal-footer">
-         <!--  <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button> -->
-        </div>
-      </div>
-    </div>
-  </div>
+   
 
 <?php get_footer(); ?>

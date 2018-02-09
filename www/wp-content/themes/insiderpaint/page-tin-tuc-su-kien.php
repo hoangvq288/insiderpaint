@@ -69,6 +69,7 @@ get_header(); ?>
                  <div class="sub-article row">
                     <div class="col-lg-9 col-left">
                         <?php
+                          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                           $the_query = new WP_Query(array(
                             'post_type' => 'tin-tuc',
                             'post_status' => 'publish',
@@ -83,7 +84,8 @@ get_header(); ?>
                                   'key' => 'order_number',
                               ),
                             ),
-                            'posts_per_page' => '10',
+                            'posts_per_page' => '5',
+                            'paged' => $paged,
                             'orderby' => array( 
                               'query_one' => 'ASC',
                               'date' => 'DESC'
@@ -94,6 +96,7 @@ get_header(); ?>
                                  $the_query->the_post();
                         ?>
                          <article>
+                            
                             <div class="article-img">
                               <?php $post_image_url = get_the_post_thumbnail_url(get_the_ID()); ?>
                               <?php $image_url = $post_image_url ? $post_image_url :  (get_bloginfo('template_directory').'/images/img_blog_1.jpg') ?>
@@ -115,6 +118,11 @@ get_header(); ?>
                             </div>
                          </article>
                         <?php } wp_reset_postdata(); ?>
+                        <?php
+                          kriesi_pagination($the_query->max_num_pages);
+                          wp_reset_query();
+                        ?>
+
                     </div>
                     <div class="col-lg-3 col-right">
                        <div class="section-sidebar search">

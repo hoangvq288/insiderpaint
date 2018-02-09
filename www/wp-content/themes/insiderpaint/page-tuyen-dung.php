@@ -23,10 +23,12 @@ get_header(); ?>
                  <div class="sub-article row">
                     <div class="col-lg-9 col-left">
                       <?php
+                          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
                           $the_query = new WP_Query(array(
                             'post_type' => 'tuyen-dung',
                             'post_status' => 'publish',
                             'posts_per_page' => '10',
+                            'paged' => $paged,
                             'orderby' => array( 
                               'query_one' => 'ASC',
                               'modified' => 'DESC'
@@ -53,40 +55,10 @@ get_header(); ?>
                             </div>
                          </article>
                        <?php } wp_reset_postdata(); ?>
-                       <div class="paging">
-                          <ul>
-                            <li class="prev__btn">
-                                <a href="">
-                                   <i class="fa fa-angle-left"></i>
-                                   Prev
-                                </a>
-                             </li>
-                             <li class="active">
-                                <a href="">1</a>
-                             </li>
-                             <li>
-                                <a href="">2</a>
-                             </li>
-                             <li>
-                                <a href="">3</a>
-                             </li>
-                             <li>
-                                <a href="">4</a>
-                             </li>
-                             <li>
-                                <a href="">...</a>
-                             </li>
-                             <li>
-                                <a href="">10</a>
-                             </li>
-                             <li class="next__btn">
-                                <a href="">
-                                   Next
-                                   <i class="fa fa-angle-right"></i>
-                                </a>
-                             </li>
-                          </ul>
-                      </div>
+                       <?php
+                        kriesi_pagination($the_query->max_num_pages);
+                        wp_reset_query();
+                        ?>
                     </div>
                     <div class="col-lg-3 col-right">
                        <div class="section-sidebar search">

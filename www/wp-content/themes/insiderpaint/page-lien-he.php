@@ -24,13 +24,12 @@ get_header(); ?>
                  <div class="map-info-ct">
                     <h3>Thông Tin Liên Hệ</h3>
                     <p>
-                       Có rất nhiều biến thể của Lorem Ipsum mà bạn có thể tìm thấy, nhưng đa số được biến đổi bằng cách thêm các yếu tố hài hước, các từ ngẫu nhiên có khi không có vẻ gì là có ý nghĩa.
                        <br><br>
                        Điện thoại: <a href="tel:"><?php echo get_field('dien_thoai', 'option') ?></a>
-                        <br><br>
-
-                       <?php echo get_field('address', 'option') ?>
-                      
+                      <br><br>
+                      Địa chỉ: <?php echo get_field('address', 'option') ?>
+                      <br><br>
+                      Email: <a href="mailto:"><?php echo get_field('email', 'option') ?></a>
                       <br><br>
                        Follow Us <br>
                        <a href="<?php the_field('facebook_url', 'option'); ?>" target="blank">
