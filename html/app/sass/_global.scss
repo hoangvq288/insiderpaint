@@ -200,6 +200,7 @@ body{
   &__left{
     display: flex;
     align-items: center;
+    position: relative;
   }
   &__right{
     display: flex;
@@ -266,7 +267,7 @@ body{
   z-index: 1000;
   @include transition-ac();
   > ul{
-    padding-top: 50px;
+    padding-top: 22px;
     width: 100%;
     li{
       position: relative;
@@ -375,6 +376,47 @@ body{
   }
 }
 
+
+.search__form{
+  position: absolute;
+  left: 80px;
+  top: 50%;
+  margin-top: -20px;
+  .search__formct{
+    position: relative;
+    i{
+      position: absolute;
+      top: 3px;
+      left: 6px;
+      font-size: 24px;
+      color: $main-color-primary;
+    }
+  }
+  input[type="text"]{
+    display: none;
+    background: transparent;
+    border: 1px solid #e5e5e5;
+    line-height: 30px;
+    padding-left: 35px;
+    width: 0px;
+    @include transition_ac();
+  }
+  input[type="checkbox"]{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+  }
+  input[type="checkbox"]:checked{
+    + input[type="text"]{
+      display: block;
+      width: 250px;
+      @include transition_ac();
+    }
+  }
+}
 
 .shownav{
   &__left{
