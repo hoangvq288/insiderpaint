@@ -63,10 +63,14 @@ jQuery.noConflict();
 				$('.header__leftct').click(function(event) {
      			$('body').toggleClass('shownav__left');
      			$('body').removeClass('shownav__right');
+     			$('.header__rightct i').removeClass('fa-close').addClass('fa-share-alt-square');
+     			$('.header__leftct i').toggleClass('fa-navicon fa-close');
 				});
 				$('.header__rightct').click(function(event) {
      			$('body').toggleClass('shownav__right');
      			$('body').removeClass('shownav__left');
+     			$('.header__leftct i').removeClass('fa-close').addClass('fa-navicon');
+     			$('.header__rightct i').toggleClass('fa-share-alt-square fa-close');
 				});
 			},
 

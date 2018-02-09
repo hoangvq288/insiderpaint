@@ -20,6 +20,7 @@ header{
 h1, h2, h3, h4, h5, h6{
   font-family: $title-font;
   font-weight: 400;
+  color: $main-color-second;
 }
 
 
@@ -171,7 +172,7 @@ body{
 }
 
 .header{
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.85);
   position: fixed;
   top: 0px;
   left: 0px;
@@ -203,6 +204,28 @@ body{
   &__right{
     display: flex;
     align-items: center;
+    position: relative;
+    .btn-callus{
+      position: absolute;
+      top: 50%;
+      margin-top: -20px;
+      right: 56px;
+      display: block;
+      width: 185px;
+      font-size: 14px;
+      i{
+        vertical-align: middle;
+        margin-right: 5px;
+        font-size: 35px;
+      }
+      span{
+        vertical-align: middle;
+        display: none;
+        @include breakpoint(desktop){
+          display: inline-block;
+        }
+      }
+    }
   }
   a{
     color: $main-color-primary;
@@ -215,7 +238,9 @@ body{
       font-size: 30px;
     }
     &:hover{
-      color: white;
+      i{
+        color: $main-color-second;
+      }
     }
   }
   .logo{
@@ -231,7 +256,7 @@ body{
 
 
 .nav{
-  background: $main-color-second;
+  background: $main-color-primary;
   width: 300px;
   position: fixed;
   top: 0px;
@@ -246,7 +271,7 @@ body{
     li{
       position: relative;
       &:hover{
-        background: #534c53;
+        background: #806d40;
       }
       a{
         font-family: $title-font;
@@ -254,6 +279,7 @@ body{
         display: block;
         font-size: 16px;
         color: white;
+        text-transform: uppercase;
         i{
           font-size: 30px;
           display: inline-block;
@@ -288,20 +314,21 @@ body{
           height: 45px;
           z-index: 1001;
           &:before{
-            content: "";
+            content: "";
             font-family: 'FontAwesome';
             display: block;
             font-size: 18px;
+            margin-left: 20px;
           }
         }
         &:checked{
           +.status{
             &:before{
-              content: "";
+              content: "";
             }
             + ul{
               display: block;
-              background: #1f131f;
+              background: $main-color-second;
             }
           }
         }
@@ -331,7 +358,7 @@ body{
       font-family: 'FontAwesome' !important;
       display: block;
       font-size: 38px;
-      color: $main-color-second;
+      color: $main-color-primary;
       width: 32px;
       height: 32px;
       display: block;
@@ -410,16 +437,20 @@ body{
     margin: 0 auto;
   }
   .bx-wrapper .bx-controls-direction a{
-    background: rgba(0,0,0,0.3);
+    background: transparent;
     width: 60px;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
+    &:hover{
+      background: rgba(0,0,0,0.3);
+    }
     &:before{
       color: $main-color-primary;
-      font-size: 24px;
-      line-height: 40px;
+      font-size: 45px;
+      margin-top: -7px;
+      line-height: 17px;
     }
   }
   .bx-default-pager{
