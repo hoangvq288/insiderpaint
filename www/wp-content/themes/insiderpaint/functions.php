@@ -121,7 +121,7 @@ if (!function_exists('hoptac_init')) {
            'capability_type' => 'post',
            'has_archive' => true,
            'hierarchical' => false,
-           'menu_position' => 30,
+           'menu_position' => 38,
            'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt')
        );
 
@@ -169,7 +169,7 @@ if (!function_exists('tuyendung_init')) {
            'capability_type' => 'post',
            'has_archive' => true,
            'hierarchical' => true,
-           'menu_position' => 30,
+           'menu_position' => 37,
            'supports' => array('title', 'editor', 'author')
        );
 
@@ -216,7 +216,7 @@ if (!function_exists('doitac_init')) {
            'capability_type' => 'post',
            'has_archive' => true,
            'hierarchical' => false,
-           'menu_position' => 30,
+           'menu_position' => 36,
            'supports' => array('title', 'thumbnail', 'author')
        );
 
@@ -264,7 +264,7 @@ if (!function_exists('tintuc_init')) {
            'capability_type' => 'post',
            'has_archive' => true,
            'hierarchical' => true,
-           'menu_position' => 30,
+           'menu_position' => 32,
            'supports' => array('title', 'editor', 'author', 'thumbnail'),
        );
 
@@ -339,7 +339,7 @@ if (!function_exists('tc_bao_chi_init')) {
            'capability_type' => 'post',
            'has_archive' => true,
            'hierarchical' => false,
-           'menu_position' => 30,
+           'menu_position' => 33,
            'supports' => array('title', 'editor', 'author')
        );
 
@@ -386,7 +386,7 @@ if (!function_exists('thu_vien_tai_lieu_init')) {
            'capability_type' => 'post',
            'has_archive' => true,
            'hierarchical' => false,
-           'menu_position' => 30,
+           'menu_position' => 31,
            'supports' => array('title', 'author')
        );
 
@@ -435,7 +435,7 @@ if (!function_exists('mau_son_tao_cam_hung_init')) {
            'capability_type' => 'post',
            'has_archive' => true,
            'hierarchical' => true,
-           'menu_position' => 30,
+           'menu_position' => 35,
            'supports' => array('title', 'author', 'thumbnail')
        );
 
@@ -482,7 +482,7 @@ if (!function_exists('du_an_tieu_bieu_init')) {
            'capability_type' => 'post',
            'has_archive' => true,
            'hierarchical' => true,
-           'menu_position' => 30,
+           'menu_position' => 34,
            'supports' => array('title', 'author', 'editor', 'thumbnail')
        );
 
