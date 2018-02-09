@@ -6,7 +6,7 @@ get_header(); ?>
      <div class="container">
         <div class="blog-ct">
           <div class="row">
-            <h3>Search Result for : <?php echo "$s"; ?> </h3>       
+            <h3>Kết quả tìm kiếm cho : <?php echo "$s"; ?> </h3>       
           </div>
            <div class="sub-article row">
               

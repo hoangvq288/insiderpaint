@@ -27,17 +27,23 @@
         <a href="javascript:;" class="header__leftct">
           <i class="fa fa-navicon"></i>
         </a>
-        <a href="javascript:;">
-          <i class="fa fa-search"></i>
-        </a>
+        
         <div>   
-            <h3>Search Products</h3>
-            <form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
-            <input type="text" name="s" placeholder="Search Products"/>
-            <input type="hidden" name="post_type" value="san-pham" /> <!-- // hidden 'products' value -->
-            <input type="submit" alt="Search" value="Search" />
-          </form>
+            
+            
+            
+          
          </div>
+         <form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
+           <div class="search__form">
+            <div class="search__formct">
+              <i class="fa fa-search"></i>
+              <input type="checkbox">
+              <input type="text" name="s" placeholder="Search Products"/>
+              <input type="hidden" name="post_type" value="san-pham" /> <!-- // hidden 'products' value -->
+            </div>
+          </div>
+        </form>
 
 
       </div>
