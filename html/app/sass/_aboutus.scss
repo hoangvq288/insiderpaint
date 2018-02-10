@@ -146,6 +146,7 @@
     color: white;
     h4{
       line-height: 28px;
+      color: white;
     }
   }
 }
@@ -155,6 +156,12 @@
   .title{
     margin-bottom: 30px;
   }
+  .row{
+    margin: 0px;
+    div[class^='col']{
+
+    }
+  }
   &__img{
     img{
       width: 100%;
@@ -162,10 +169,12 @@
       object-position: center;
       object-fit: cover;
       height: 100%;
+      margin-left: -15px;
     }
   }
   &__main{
     padding-top: 50px;
+    padding-bottom: 50px;
   }
   &__list{
     position: relative;
