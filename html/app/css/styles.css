@@ -15593,7 +15593,7 @@ body {
     box-shadow: inset 0px 3px 7px 0px rgba(140, 146, 173, 0.2);
     line-height: 18px;
     font-size: 12px;
-    background: #e5e5e5;
+    background: #f5f5f5;
     /* do not group these rules */ }
   .form-group *::-webkit-input-placeholder {
     color: #000;
@@ -15625,6 +15625,7 @@ body {
   padding-bottom: 10px;
   padding-left: 0px;
   padding-right: 0px;
+  z-index: 10000;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -15702,7 +15703,7 @@ body {
   left: -300px;
   height: 100%;
   min-height: 100%;
-  z-index: 1000;
+  z-index: 10001;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
@@ -16454,6 +16455,17 @@ footer .sociallink {
     display: flex;
     justify-content: center;
     align-items: center; }
+  .service .service-list {
+    text-align: center; }
+    .service .service-list span {
+      display: inline-block;
+      margin-bottom: 15px; }
+    .service .service-list i {
+      font-size: 45px;
+      color: #e5bd5e; }
+    .service .service-list h5 {
+      margin-bottom: 15px;
+      font-size: 18px; }
 
 .news {
   background: url("../images/bg_pattern_light_grey.jpg") repeat;
@@ -17963,7 +17975,7 @@ footer .sociallink {
     .contact-info .map-info .map-info-ct p a i {
       margin-right: 15px;
       margin-top: 15px;
-      color: #9B9B9B;
+      color: #e5bd5e;
       display: inline-block;
       font-size: 24px; }
 

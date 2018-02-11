@@ -68,6 +68,21 @@
     justify-content: center;
     align-items: center;
   }
+  .service-list{
+    text-align: center;
+    span{
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    i{
+      font-size: 45px;
+      color: $main-color-primary;
+    }
+    h5{
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+  }
 }
 
 
