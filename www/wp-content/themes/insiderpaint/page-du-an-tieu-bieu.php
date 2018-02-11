@@ -97,7 +97,7 @@ get_header(); ?>
               <span><?php the_field('mo_ta') ?></span>
 
               <div class="project__slide">
-                <ul class="bxslider">
+                <ul class="bxslider no_<?php echo $the_query->current_post;?>">
                   <?php 
                     $images = get_field('slider');
                     if( $images ): ?>
