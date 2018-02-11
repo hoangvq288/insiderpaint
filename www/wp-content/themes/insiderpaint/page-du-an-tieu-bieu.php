@@ -53,10 +53,15 @@ get_header(); ?>
                 <div class="product__img">
                   <?php $post_image_url = get_the_post_thumbnail_url(get_the_ID()); ?>
                   <?php $image_url = $post_image_url ? $post_image_url :  (get_bloginfo('template_directory').'/images/img_pd_3.jpg') ?>
-                  <img src="<?php echo $image_url; ?>" alt="" height="172px">
+                  <a href="#<?php echo $the_query->current_post; ?>" class="see-more">
+                    <img src="<?php echo $image_url; ?>" alt="" height="172px">  
+                  </a>
+                  
                 </div>
                 <div class="product__des">
-                  <h4><?php the_title(); ?></h4>
+                  <h4>
+                      <?php the_title(); ?>  
+                  </h4>
                   <p style="min-height:88px">
                     <?php echo wp_trim_words(get_field('mo_ta'), 30, '...'); ?>
                   </p>

@@ -1,6 +1,10 @@
 <section class="client">
     <div class="client__title">
-      <h3>Khách hàng Dự Án</h3>
+        <h3>
+          <a href="<?php echo get_permalink(get_page_by_path('doi-tac-chien-luoc')->ID); ?>">
+            Khách hàng Dự Án
+          </a>
+        </h3>  
     </div>
     <div class="container">
       <ul class="bxslider_client">

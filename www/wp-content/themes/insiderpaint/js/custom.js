@@ -11,8 +11,7 @@ jQuery(document).ready(function($) {
       }
   });
   $('.see-more').on('click', function(){
-    console.log("Button Seemore");
-    console.log($(this));
+    
     project_id = $(this).attr('href').replace('#', '');
     $('.product__list.active').removeClass('active');
     console.log($('project__detail.detail_current'));

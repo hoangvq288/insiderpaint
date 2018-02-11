@@ -24,12 +24,11 @@ get_header(); ?>
                  <div class="map-info-ct">
                     <h3>Thông Tin Liên Hệ</h3>
                     <p>
-                       <br><br>
-                       Điện thoại: <a href="tel:"><?php echo get_field('dien_thoai', 'option') ?></a>
-                      <br><br>
-                      Địa chỉ: <?php echo get_field('address', 'option') ?>
+                      Điện thoại: <a href="tel:"><?php echo get_field('dien_thoai', 'option') ?></a>
                       <br><br>
                       Email: <a href="mailto:"><?php echo get_field('email', 'option') ?></a>
+                      <br><br>
+                      Địa chỉ: <?php echo get_field('address', 'option') ?>
                       <br><br>
                        Follow Us <br>
                        <a href="<?php the_field('facebook_url', 'option'); ?>" target="blank">

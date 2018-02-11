@@ -58,5 +58,9 @@
         <a href="javascript:;" class="header__rightct">
           <i class="fa fa-share-alt-square"></i>
         </a>
+        <a href="tel:<?php the_field('dien_thoai', 'option'); ?>" class="btn-callus">
+          <i class="fa fa-mobile-phone"></i>
+          <span>CALL US: <?php the_field('dien_thoai', 'option'); ?></span>
+        </a>
       </div>
     </header>

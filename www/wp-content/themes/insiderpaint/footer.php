@@ -33,34 +33,22 @@
     <div class="footer__bottom">
       <ul>
         <li>
-          <a href="<?php echo get_home_url(); ?>">
-            Trang chủ
-          </a>
+          <a href="<?php echo get_home_url(); ?>">Trang Chù </a>
         </li>
         <li>
-          <a href="<?php echo get_permalink(get_page_by_path('gioi-thieu')->ID); ?>">
-            Giới thiệu
-          </a>
+          <a href="<?php echo get_permalink(get_page_by_path('gioi-thieu')->ID); ?>">Giới thiệu</a>
         </li>
         <li>
-          <a href="<?php echo get_permalink(get_page_by_path('danh-muc-san-pham')->ID); ?>">
-            Danh mục sản phẩm
-          </a>
+          <a href="<?php echo get_permalink(get_page_by_path('du-an-tieu-bieu')->ID); ?>">Dự Án Tiêu Biểu</a>
         </li>
         <li>
-          <a href="<?php echo get_permalink(get_page_by_path('thong-cao-bao-chi')->ID); ?>">
-            Truyền thông
-          </a>
+          <a href="<?php echo get_permalink(get_page_by_path('tin-tuc-su-kien')->ID); ?>">Tin Tức Sự Kiện</a>
         </li>
         <li>
-          <a href="<?php echo get_permalink(get_page_by_path('du-an-tieu-bieu')->ID); ?>">
-            Dự án tiêu biểu
-          </a>
+          <a href="<?php echo get_permalink(get_page_by_path('thong-cao-bao-chi')->ID); ?>">Thông Cáo Báo Chí</a>
         </li>
         <li>
-          <a href="<?php echo get_permalink(get_page_by_path('lien-he')->ID); ?>" class="nav__link">
-            Liên Hệ & Hợp tác
-          </a>
+          <a href="<?php echo get_permalink(get_page_by_path('lien-he')->ID); ?>">Liên Hệ</a>
         </li>
       </ul>
       <p>

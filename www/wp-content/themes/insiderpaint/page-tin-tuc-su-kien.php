@@ -43,19 +43,24 @@ get_header(); ?>
                     <div class="row ">
                        <div class="col-lg-12 col-12 title-main">
                           <h2 class="title title-center">
-                             <?php the_title(); ?>
+                             <a href="<?php echo get_permalink(get_the_ID()); ?>">
+                              <?php the_title(); ?>  
+                             </a>
                           </h2>
                           <p>
-                             <?php the_date(); ?>
+                             <?php echo get_the_date(); ?>
                           </p>
                        </div>
                        <div class="col-lg-12 col-12 featured-detail">
                           <?php $post_image_url = get_the_post_thumbnail_url(get_the_ID()); ?>
                           <?php $image_url = $post_image_url ? $post_image_url :  (get_bloginfo('template_directory').'/images/img_banner_project_2.jpg') ?>
-                          <div class="feature-img" style="background: url('<?php echo $image_url ?>') no-repeat;">
-                          </div>
+                          <a href="<?php echo get_permalink(get_the_ID()); ?>">
+                            <div class="feature-img" style="background: url('<?php echo $image_url ?>') no-repeat;">
+                          </div>  
+                          </a>
+                          
                           <div class="featured-content">
-                             <?php the_field('mo_ta'); ?>
+                            <?php echo wp_trim_words(get_field('mo_ta'), 120, '...'); ?>
                           </div>
                           <div class="btn-ct">
                              <a href="<?php echo get_permalink(get_the_ID()); ?>" class="btn btn-link">
@@ -96,21 +101,28 @@ get_header(); ?>
                                  $the_query->the_post();
                         ?>
                          <article>
-                            
                             <div class="article-img">
                               <?php $post_image_url = get_the_post_thumbnail_url(get_the_ID()); ?>
                               <?php $image_url = $post_image_url ? $post_image_url :  (get_bloginfo('template_directory').'/images/img_blog_1.jpg') ?>
-                               <img src="<?php echo $post_image_url ?>" alt="">
+                              <a href="<?php echo get_permalink(get_the_ID()); ?>">
+                                <img src="<?php echo $image_url ?>" alt=""> 
+                              </a>
+                               
                             </div>
                             <div class="article-content">
-                               <h3><?php the_title(); ?></h3>
+                               <h3>
+                                <a href="<?php echo get_permalink(get_the_ID()); ?>">
+                                  <?php the_title(); ?>  
+                                </a>
+                                
+                              </h3>
                                <ul>
                                   <li>
-                                     <span><?php get_the_date(); ?></span>
+                                     <span><?php echo get_the_date(); ?></span>
                                   </li>
                                </ul>
                                <div class="article-des">
-                                 <?php the_field('mo_ta'); ?>
+                                <?php echo wp_trim_words(get_field('mo_ta'), 120, '...'); ?>
                                </div>
                                <a href="<?php echo get_permalink(get_the_ID()); ?>" class="btn btn-link">
                                   Xem thêm

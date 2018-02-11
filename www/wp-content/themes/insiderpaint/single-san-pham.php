@@ -89,168 +89,21 @@ get_header(); ?>
         </div>
       </div>
       <div class="productdetail__tab--color">
-        <ul>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_1.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
+        <?php if(get_field('color_range')): ?>
+          <ul>
+          <?php while(has_sub_field('color_range')): ?>
+            <li>
+              <div class="content">
+                <img src="<?php the_sub_field('image') ?>" alt="">
+                <div class="productdetail__colordes">
+                  <?php the_sub_field('code') ?>
+                </div>
               </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_2.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_3.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_4.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_5.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_6.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_7.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_8.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_9.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_10.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_11.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_12.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_13.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_14.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_15.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_16.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_17.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_18.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_19.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="content">
-              <img src="<?php echo get_bloginfo('template_directory') ?>/images/color_20.jpg" alt="">
-              <div class="productdetail__colordes">
-                #345eff
-              </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+
+          <?php endwhile; ?>
+          </ul>
+        <?php endif; ?>
       </div>
     </div>
   </section>
