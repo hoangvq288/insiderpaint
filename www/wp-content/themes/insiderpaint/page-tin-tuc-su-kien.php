@@ -59,7 +59,7 @@ get_header(); ?>
                           </div>  
                           </a>
                           
-                          <div class="featured-content">
+                          <div class="featured-content text-justify">
                             <?php echo wp_trim_words(get_field('mo_ta'), 120, '...'); ?>
                           </div>
                           <div class="btn-ct">

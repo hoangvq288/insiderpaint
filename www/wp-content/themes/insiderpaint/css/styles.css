@@ -16760,7 +16760,7 @@ footer .sociallink {
   .value__title {
     text-align: center; }
   .value__text {
-    text-align: center; }
+    text-align: justify; }
 
 .insider__listct {
   background: #e5bd5e;
@@ -16780,6 +16780,7 @@ footer .sociallink {
   padding-right: 30px;
   padding-top: 30px;
   color: white; }
+
   .insider__des h4 {
     line-height: 28px;
     color: white; }
@@ -17116,7 +17117,9 @@ footer .sociallink {
     left: -31px !important; }
 
 .project__des {
-  padding-top: 30px; }
+  padding-top: 30px;
+  text-align: justify;}
+
 
 .banner_project ul li img {
   height: 700px;

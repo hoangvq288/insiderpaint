@@ -50,7 +50,7 @@ get_header(); ?>
                     <?php the_title(); ?>
                   </a>
                 </h4>
-                <p>
+                <p class="text-justify">
                   <?php echo wp_trim_words(get_field('mo_ta'), 45, '...'); ?>
                 </p>
               </div>

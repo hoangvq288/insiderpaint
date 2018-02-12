@@ -32,13 +32,15 @@ get_header(); ?>
         <div class="row">
           <div class="col-lg-12">
             <h4 class="title title__line"><?php the_title(); ?></h4>
-            <span><?php the_field('mo_ta'); ?></span>
+            <span class="text-justify"><?php the_field('mo_ta'); ?></span>
           </div>
           <div class="col-lg-5 col-12 productdetail__img">
             <img src="<?php echo get_field('hinh_chi_tiet_sp'); ?>" alt="">
           </div>
-          <div class="col-lg-7 col-12 productdetail__detail">
-            <?php the_field('chi_tiet_sp'); ?> 
+          <div class="col-lg-7 col-12 productdetail__detail text">
+            <p class="text-justify">
+              <?php the_field('chi_tiet_sp'); ?> 
+            </p>
             <a href="tel:<?php echo get_field('dien_thoai', 'option'); ?>" class="btn btn-primary">
               Liên hệ chúng tôi đẻ biết thêm chi tiết
             </a>
@@ -63,7 +65,7 @@ get_header(); ?>
                 <i class="icofont icofont-rulers-alt"></i>
               </span>
               <h5><?php the_field('title_feature_1') ?></h5>
-              <p style="min-height: 66px">
+              <p style="min-height: 66px" class="text-justify">
                 <?php the_field('text_feature_1') ?>
               </p>
             </li>
@@ -72,7 +74,7 @@ get_header(); ?>
                 <i class="icofont icofont-water-drop"></i>
               </span>
               <h5><?php the_field('title_feature_2') ?></h5>
-              <p style="min-height: 66px">
+              <p style="min-height: 66px" class="text-justify">
                 <?php the_field('text_feature_2') ?>
               </p>
             </li>
@@ -81,7 +83,7 @@ get_header(); ?>
                 <i class="icofont icofont-full-sunny"></i>
               </span>
               <h5><?php the_field('title_feature_3') ?></h5>
-              <p style="min-height: 66px">
+              <p style="min-height: 66px" class="text-justify">
                 <?php the_field('text_feature_3') ?>
               </p>
             </li>

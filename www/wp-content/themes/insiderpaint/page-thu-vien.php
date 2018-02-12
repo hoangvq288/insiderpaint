@@ -41,7 +41,7 @@ get_header(); ?>
                 </div>
                 <div class="product__des">
                   <h4><?php the_title(); ?></h4>
-                  <p style="min-height:88px">
+                  <p style="min-height:88px" class="text-justify">
                     <?php echo wp_trim_words(get_field('mo_ta'), 45, '...'); ?>
                   </p>
                   <a href="<?php the_field('file') ?>" class="btn btn-primary">

@@ -62,7 +62,7 @@ get_header(); ?>
                   <h4>
                       <?php the_title(); ?>  
                   </h4>
-                  <p style="min-height:88px">
+                  <p style="min-height:88px" class="text-justify">
                     <?php echo wp_trim_words(get_field('mo_ta'), 30, '...'); ?>
                   </p>
                   <a href="#<?php echo $the_query->current_post; ?>" class="btn btn-primary see-more">
@@ -94,7 +94,7 @@ get_header(); ?>
             <? } ?>
             
               <h4 class="title title__line"><?php the_title(); ?></h4>
-              <span><?php the_field('mo_ta') ?></span>
+              <span class="text-justify"><?php the_field('mo_ta') ?></span>
 
               <div class="project__slide">
                 <ul class="bxslider no_<?php echo $the_query->current_post;?>">
