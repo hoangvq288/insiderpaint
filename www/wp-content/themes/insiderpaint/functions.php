@@ -170,7 +170,7 @@ if (!function_exists('tuyendung_init')) {
            'has_archive' => true,
            'hierarchical' => true,
            'menu_position' => 37,
-           'supports' => array('title', 'editor', 'author')
+           'supports' => array('title', 'editor', 'author', 'thumbnail')
        );
 
        register_post_type('tuyen-dung', $args);
@@ -340,7 +340,7 @@ if (!function_exists('tc_bao_chi_init')) {
            'has_archive' => true,
            'hierarchical' => false,
            'menu_position' => 33,
-           'supports' => array('title', 'editor', 'author')
+           'supports' => array('title', 'editor', 'author', 'thumbnail')
        );
 
        register_post_type('tc-bao-chi', $args);
@@ -574,10 +574,10 @@ function fetch_modal_content() {
 add_action( 'wp_ajax_fetch_modal_content', 'fetch_modal_content' );
 add_action( 'wp_ajax_nopriv_fetch_modal_content', 'fetch_modal_content' );
 //GLOBAL VAR
-$ITEMS_PER_PAGE_FOR_NEWS = 5;
+$ITEMS_PER_PAGE_FOR_NEWS = 7;
 $SIDEBAR_ITEMS_PER_QUERY = 5;
-$ITEMS_PER_PAGE_FOR_NORMAL_POST = 10;
-$ITEMS_PER_PAGE_FOR_INSPIRATION = 15;
+$ITEMS_PER_PAGE_FOR_NORMAL_POST = 5;
+$ITEMS_PER_PAGE_FOR_INSPIRATION = 21;
 $ITEMS_PER_PAGE_FOR_PRODUCTS = 12;
 $ITEMS_PER_PAGE_FOR_LIBRARY = 12;
 $ITEMS_PER_PAGE_FOR_PARTNERS = 12;

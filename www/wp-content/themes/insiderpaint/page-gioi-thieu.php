@@ -24,7 +24,7 @@ get_header(); ?>
               <h3 class="title title__line">
                 GIỚI THIỆU VỀ INSIDER
               </h3>
-              <div class="aboutus__text">
+              <div class="aboutus__text text-justify">
                 <?php the_field('qua_trinh_hinh_thanh') ?>
                 <blockquote class="blockquote blockquote__about">
                   <?php the_field('trich_dan') ?>
@@ -47,7 +47,7 @@ get_header(); ?>
                 <i class="icofont icofont-dart"></i>
               </div>
               <h4 class="value__title">Mục tiêu</h4>
-              <p class="value__text">
+              <p class="value__text text-justify">
                 <?php the_field('muc_tieu') ?>
               </p>
             </div>
@@ -56,7 +56,7 @@ get_header(); ?>
                 <i class="icofont icofont-look"></i>
               </div>
               <h4 class="value__title">Tầm nhìn</h4>
-              <p class="value__text">
+              <p class="value__text text-justify">
                 <?php the_field('tam_nhin') ?>
               </p>
             </div>
@@ -65,7 +65,7 @@ get_header(); ?>
                 <i class="icofont icofont-brand-designbump"></i>
               </div>
               <h4 class="value__title">Sứ mệnh</h4>
-              <p class="value__text">
+              <p class="value__text text-justify">
                 <?php the_field('su_menh') ?>
               </p>
             </div>
@@ -85,7 +85,7 @@ get_header(); ?>
                 </div>
                 <div class="insider__des">
                   <h4>SÁNG TẠO </br>& VƯỢT QUA THỬ THÁCH</h4>
-                  <p>
+                  <p class="text-justify">
                     Công việc đòi hỏi mỗi thành viên phải luôn sáng tạo và tìm cách vượt qua những thử thách trong công việc nhằm mang lại sự hài lòng cho khách hàng.
                   </p>
                 </div>
@@ -98,7 +98,7 @@ get_header(); ?>
                 </div>
                 <div class="insider__des">
                   <h4>ĐOÀN KẾT & HỖ TRỢ</h4>
-                  <p>
+                  <p class="text-justify">
                     Các thành viên Insider cùng nhau nỗ lực, hỗ trợ và đoàn kết để hướng đến mục đích chung của cả tập thể.
                   </p>
                 </div>
@@ -111,7 +111,7 @@ get_header(); ?>
                 </div>
                 <div class="insider__des">
                   <h4>TỬ TẾ & HIỆU QUẢ</h4>
-                  <p>
+                  <p class="text-justify">
                     Luôn tử tế và hiệu quả trong công việc để trở nên đáng tin cậy với khách hàng và với các thành viên trong tổ chức của mình.
                   </p>
                 </div>
@@ -124,7 +124,7 @@ get_header(); ?>
                 </div>
                 <div class="insider__des">
                   <h4>THÂN THIỆN & VUI VẺ</h4>
-                  <p>
+                  <p class="text-justify">
                     Tinh thần thân thiện và vui vẻ sẽ giúp các thành viên Insider đi xa hơn cùng với nhau và với khách hàng.
                   </p>
                 </div>
@@ -148,27 +148,27 @@ get_header(); ?>
                 <ul class="row">
                   <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-briefcase-alt-1"></i>
-                    <span>Giải pháp trọn gói bao gồm sản phẩm & dịch vụ thi công chuyên nghiệp.</span>
+                    <span class="text-justify">Giải pháp trọn gói bao gồm sản phẩm & dịch vụ thi công chuyên nghiệp.</span>
                   </li>
                   <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-girl-alt"></i>
-                    <span>Chuyên viên tư vấn chu đáo cho các nhu cầu của khách hàng.</span>
+                    <span class="text-justify">Chuyên viên tư vấn chu đáo cho các nhu cầu của khách hàng.</span>
                   </li>
                   <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-shield-alt"></i>
-                    <span>Bảo hành cho sản phẩm & dịch vụ.</span>
+                    <span class="text-justify">Bảo hành cho sản phẩm & dịch vụ.</span>
                   </li>
                   <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-paint-brush"></i>
-                    <span>Thiết kế nhiều mẫu tường nghệ thuật đa dạng phù hợp cho mọi loại không gian nội thất.</span>
+                    <span class="text-justify">Thiết kế nhiều mẫu tường nghệ thuật đa dạng phù hợp cho mọi loại không gian nội thất.</span>
                   </li>
                   <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-building-alt"></i>
-                    <span>Phối hợp quản lí thi công hiệu quả về chi phí và tiến độ.</span>
+                    <span class="text-justify">Phối hợp quản lí thi công hiệu quả về chi phí và tiến độ.</span>
                   </li>
                   <li class="col-lg-12 col-12 clientinsider__list">
                     <i class="icofont icofont-trowel"></i>
-                    <span>Tùy chỉnh và cung cấp giải pháp phù hợp cho nhu cầu của khách hàng.</span>
+                    <span class="text-justify">Tùy chỉnh và cung cấp giải pháp phù hợp cho nhu cầu của khách hàng.</span>
                   </li>
                 </ul>
               </div>

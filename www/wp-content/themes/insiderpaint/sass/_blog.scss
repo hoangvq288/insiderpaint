@@ -16,6 +16,12 @@
   }
 }
 
+.featured-content{
+  p{
+    text-align: justify;
+  }
+}
+
 .title-main{
   margin-bottom: 30px;
 }
@@ -255,7 +261,8 @@
       line-height: 45px;
       text-align: left;
       padding-left: 15px;
-      background: $main-color-second;
+      background: $main-color-primary;
+      font-size: 14px;
     }
   }
   .sidebar-content{
@@ -275,6 +282,8 @@
         padding-top: 10px;
         padding-bottom: 10px;
         position: relative;
+        padding-left: 15px;
+        padding-right: 15px;
         border-bottom: 1px dotted #e6e6e6;
         a{
           color: black;

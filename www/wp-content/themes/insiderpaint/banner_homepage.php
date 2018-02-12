@@ -8,7 +8,7 @@
                    <li>
                       <img src="<?php echo $image['url']?>" alt="">
                       <div class="banner__desmain">
-                        <div class="banner__des col-md-6">
+                        <div class="banner__des col-md-6 text-justify">
                           <?php the_field('text_slider_'. ($id+1) . "") ?>
                         </div>
                       </div>

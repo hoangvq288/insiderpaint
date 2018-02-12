@@ -39,7 +39,10 @@ get_header(); ?>
               <?php $post_image_url = get_the_post_thumbnail_url(get_the_ID()); ?>
               <?php $image_url = $post_image_url ? $post_image_url :  (get_bloginfo('template_directory').'/images/img_pd_4.jpg') ?>
               <div class="product__img">
-                <img src="<?php echo $image_url ?>" alt="" height="244px">
+                <a href="<?php echo get_permalink(get_the_ID()); ?>">
+                  <img src="<?php echo $image_url ?>" alt="" height="244px">  
+                </a>
+                
               </div>
               <div class="product__des">
                 <h4>
@@ -47,7 +50,7 @@ get_header(); ?>
                     <?php the_title(); ?>
                   </a>
                 </h4>
-                <p>
+                <p class="text-justify">
                   <?php echo wp_trim_words(get_field('mo_ta'), 45, '...'); ?>
                 </p>
               </div>
