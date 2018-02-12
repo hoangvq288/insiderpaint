@@ -182,7 +182,9 @@
         object-position: center;
         object-fit: cover;
         @include breakpoint(tablet){
+          width: 100% !important;
           height: auto;
+          max-height: 350px;
         }
       }
     }
@@ -464,6 +466,7 @@
   .article-ct{
     position: relative;
     padding-top: 30px;
+    text-align: justify;
     &:before{
       height: 2px;
       display: block;

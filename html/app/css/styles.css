@@ -17253,7 +17253,9 @@ footer .sociallink {
       object-fit: cover; }
       @media screen and (min-width: 768px) {
         .sub-article article .article-img img {
-          height: auto; } }
+          width: 100% !important;
+          height: auto;
+          max-height: 350px; } }
   .sub-article article h3 {
     margin-bottom: 10px; }
   .sub-article article .article-des {
@@ -17474,7 +17476,8 @@ footer .sociallink {
 
 .article-detail .article-ct {
   position: relative;
-  padding-top: 30px; }
+  padding-top: 30px;
+  text-align: justify; }
   .article-detail .article-ct:before {
     height: 2px;
     display: block;
