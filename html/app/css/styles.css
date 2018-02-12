@@ -16461,13 +16461,14 @@ footer .sociallink {
     text-align: center; }
     .service .service-list span {
       display: inline-block;
-      margin-bottom: 15px; }
+      margin-bottom: 30px; }
     .service .service-list i {
-      font-size: 45px;
+      font-size: 65px;
       color: #e5bd5e; }
     .service .service-list h5 {
       margin-bottom: 15px;
-      font-size: 18px; }
+      font-size: 26px;
+      line-height: 35px; }
 
 .news {
   background: url("../images/bg_pattern_light_grey.jpg") repeat;

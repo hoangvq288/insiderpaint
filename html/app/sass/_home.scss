@@ -74,15 +74,16 @@
     text-align: center;
     span{
       display: inline-block;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
     }
     i{
-      font-size: 45px;
+      font-size: 65px;
       color: $main-color-primary;
     }
     h5{
       margin-bottom: 15px;
-      font-size: 18px;
+      font-size: 26px;
+      line-height: 35px;
     }
   }
 }
