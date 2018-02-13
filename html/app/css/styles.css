@@ -16977,7 +16977,10 @@ footer .sociallink {
     width: 350px; }
 
 .productdetail__detail {
-  padding-top: 50px; }
+  padding-top: 50px;
+  text-align: justify; }
+  .productdetail__detail p {
+    text-align: justify; }
 
 .productdetail__tab--content {
   background: #555;
@@ -17978,12 +17981,23 @@ footer .sociallink {
     align-items: flex-start; }
     .contact-info .map-info .title {
       margin-bottom: 25px; }
-    .contact-info .map-info .map-info-ct p a i {
-      margin-right: 15px;
-      margin-top: 15px;
-      color: #e5bd5e;
-      display: inline-block;
-      font-size: 24px; }
+    .contact-info .map-info .map-info-ct p {
+      display: block;
+      margin-bottom: 5px; }
+      .contact-info .map-info .map-info-ct p:first-of-type {
+        margin-top: 15px; }
+      .contact-info .map-info .map-info-ct p:last-of-type {
+        margin-top: -15px; }
+      .contact-info .map-info .map-info-ct p label {
+        display: inline-block;
+        width: 100px;
+        vertical-align: middle; }
+      .contact-info .map-info .map-info-ct p a i {
+        margin-right: 15px;
+        margin-top: 15px;
+        color: #e5bd5e;
+        display: inline-block;
+        font-size: 24px; }
 
 .title-sub {
   display: flex;

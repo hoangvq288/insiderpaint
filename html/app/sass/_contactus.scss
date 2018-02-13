@@ -81,6 +81,19 @@
     }
     .map-info-ct{
       p{
+        display: block;
+        margin-bottom: 5px;
+        &:first-of-type{
+          margin-top: 15px;
+        }
+        &:last-of-type{
+          margin-top: -15px;
+        }
+        label{
+          display: inline-block;
+          width: 100px;
+          vertical-align: middle;
+        }
         a{
           i{
             margin-right: 15px;
