@@ -57,6 +57,14 @@
   &__des{
     padding-top: 30px;
   }
+  &__slide{
+    ul{
+      li{
+        max-width: 1010px;
+        width: 100% !important;
+      }
+    }
+  }
 }
 
 .banner_project{
