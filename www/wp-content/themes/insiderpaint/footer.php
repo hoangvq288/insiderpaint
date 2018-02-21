@@ -33,7 +33,7 @@
     <div class="footer__bottom">
       <ul>
         <li>
-          <a href="<?php echo get_home_url(); ?>">Trang Chù </a>
+          <a href="<?php echo get_home_url(); ?>">Trang Chủ </a>
         </li>
         <li>
           <a href="<?php echo get_permalink(get_page_by_path('gioi-thieu')->ID); ?>">Giới thiệu</a>

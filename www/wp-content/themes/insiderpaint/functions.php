@@ -122,7 +122,7 @@ if (!function_exists('hoptac_init')) {
            'has_archive' => true,
            'hierarchical' => false,
            'menu_position' => 38,
-           'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt')
+           'supports' => array('title', 'editor', 'author', 'thumbnail', 'page-attributes')
        );
 
        register_post_type('hop-tac', $args);

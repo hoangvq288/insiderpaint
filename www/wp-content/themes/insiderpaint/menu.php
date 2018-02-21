@@ -11,10 +11,11 @@
       </a>
     </li>
     <li>
+      <input type="checkbox">
       <a href="<?php echo get_permalink(get_page_by_path('danh-muc-san-pham')->ID); ?>" class="nav__link">
         Danh Mục Sản Phẩm
       </a>
-      <input type="checkbox">
+      
       <span class="status"></span>
       <ul>
         <?php
@@ -37,10 +38,11 @@
       </ul>
     </li>
     <li>
+      <input type="checkbox">
       <a href="javascript:;" class="nav__link">
         Truyền Thông
       </a>
-      <input type="checkbox">
+      
       <span class="status"></span>
       <ul>
         <li>
@@ -61,10 +63,11 @@
       </ul>
     </li>
     <li>
+      <input type="checkbox">
       <a href="javascript:;" class="nav__link">
         Dự án tiêu biểu
       </a>
-      <input type="checkbox">
+      
       <span class="status"></span>
       <ul>
         <li>
@@ -85,10 +88,11 @@
       </ul>
     </li>
     <li>
+      <input type="checkbox">
       <a href="javascript:;" class="nav__link">
         Liên hệ & Hợp tác
       </a>
-      <input type="checkbox">
+      
       <span class="status"></span>
       <ul>
         <li>

@@ -5,7 +5,7 @@ get_header(); ?>
   <div class="blog-content">
      <div class="container">
         <div class="blog-ct">
-          <div class="featured-article">
+          <div class="featured-article no-banner">
             <div class="row ">
                <div class="col-lg-12 col-12 title-main">
                   <br />

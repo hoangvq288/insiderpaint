@@ -68,6 +68,10 @@
   }
   &__detail{
     padding-top: 50px;
+    text-align: justify;
+    p{
+      text-align: justify;
+    }
   }
   &__tab{
     &--content{

@@ -8,24 +8,12 @@
  */
 
 get_header(); ?>
-<section class="banner banner_project">
-  <div class="banner__slider">
-    <ul class="bxslider">
-      <?php 
-        $images = get_field('slider');
-        if( $images ): ?>
-            <?php foreach( $images as $id=>$image ): ?>
-                 <li>
-                    <img src="<?php echo $image['url']?>" alt="">
-                    <div class="banner__desmain">
-                      <div class="banner__des col-md-6">
-                        <?php the_content(); ?>
-                      </div>
-                    </div>
-                  </li>
-            <?php endforeach; ?>
-      <?php endif; ?>
-    </ul>
+<section class="banner banner__news">
+  <h2 class="title title__line">
+    Dự án tiêu biểu
+  </h2>
+  <div class="banner-one">
+    <img src="<?php the_field('banner'); ?>" alt="">
   </div>
 </section>
 <div class="main-content">
@@ -49,13 +37,12 @@ get_header(); ?>
                 <li class="product__list col-lg-4 col-12">
             <?php } ?>
             
-              <div class="product__listct">
+              <div class="product__listct see-more" id="#<?php echo $the_query->current_post; ?>">
                 <div class="product__img">
                   <?php $post_image_url = get_the_post_thumbnail_url(get_the_ID()); ?>
                   <?php $image_url = $post_image_url ? $post_image_url :  (get_bloginfo('template_directory').'/images/img_pd_3.jpg') ?>
-                  <a href="#<?php echo $the_query->current_post; ?>" class="see-more">
-                    <img src="<?php echo $image_url; ?>" alt="" height="172px">  
-                  </a>
+                  <img src="<?php echo $image_url; ?>" alt="" height="172px">  
+                  
                   
                 </div>
                 <div class="product__des">
@@ -65,7 +52,7 @@ get_header(); ?>
                   <p style="min-height:88px" class="text-justify">
                     <?php echo wp_trim_words(get_field('mo_ta'), 30, '...'); ?>
                   </p>
-                  <a href="#<?php echo $the_query->current_post; ?>" class="btn btn-primary see-more">
+                  <a href="javascript:;" class="btn btn-primary">
                     Xem Thêm
                   </a>
                 </div>
@@ -94,7 +81,7 @@ get_header(); ?>
             <? } ?>
             
               <h4 class="title title__line"><?php the_title(); ?></h4>
-              <span class="text-justify"><?php the_field('mo_ta') ?></span>
+              <span><?php the_field('mo_ta') ?></span>
 
               <div class="project__slide">
                 <ul class="bxslider no_<?php echo $the_query->current_post;?>">

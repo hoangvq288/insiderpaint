@@ -41,8 +41,8 @@ get_header(); ?>
             <p class="text-justify">
               <?php the_field('chi_tiet_sp'); ?> 
             </p>
-            <a href="tel:<?php echo get_field('dien_thoai', 'option'); ?>" class="btn btn-primary">
-              Liên hệ chúng tôi đẻ biết thêm chi tiết
+            <a href="<?php echo get_permalink(get_page_by_path('lien-he')->ID); ?>" class="btn btn-primary">
+              Liên hệ chúng tôi để biết thêm chi tiết
             </a>
           </div>
         </div>

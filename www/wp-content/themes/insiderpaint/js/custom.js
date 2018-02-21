@@ -12,15 +12,15 @@ jQuery(document).ready(function($) {
       }
   });
   $('.see-more').on('click', function(){
-    
-    project_id = $(this).attr('href').replace('#', '');
+    console.log($(this))
+    project_id = $(this).attr('id').replace('#', '');
     $('.product__list.active').removeClass('active');
     $('.project__detail.detail_current').hide();
     $('project__detail.detail_current').removeClass('detail_current');
     
     $('.project__detail.no_'.concat(project_id)).show();
     $('.project__detail.no_'.concat(project_id)).addClass('detail_current')
-    console.log($('.bxslider-project'))
+    
     $(this).closest('li').addClass('active');
   });
   

@@ -32,7 +32,7 @@ get_header(); ?>
                           'compare'   => '=',
                       ),
                     ),
-                    'orderby' => 'date',
+                    'orderby' => 'modified',
                     'order' => 'DESC',
                     'posts_per_page' => '1'
                   ));
@@ -93,7 +93,7 @@ get_header(); ?>
                             'paged' => $paged,
                             'orderby' => array( 
                               'query_one' => 'ASC',
-                              'date' => 'DESC'
+                              'modified' => 'DESC'
                             ),
                             
                           ));

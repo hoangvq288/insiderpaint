@@ -22,30 +22,27 @@ get_header(); ?>
            <div class="contact-info row">
               <div class="col-lg-6 map-info">
                  <div class="map-info-ct">
-                    <h3>Thông Tin Liên Hệ</h3>
-                    <p>
-                      Điện thoại: <a href="tel:"><?php echo get_field('dien_thoai', 'option') ?></a>
-                      <br><br>
-                      Email: <a href="mailto:"><?php echo get_field('email', 'option') ?></a>
-                      <br><br>
-                      Địa chỉ: <?php echo get_field('address', 'option') ?>
-                      <br><br>
-                       Follow Us <br>
-                       <a href="<?php the_field('facebook_url', 'option'); ?>" target="blank">
-                          <i class="fa fa-facebook-square "></i>
-                       </a>
-                       <a href="<?php the_field('youtube_url', 'option'); ?>" target="blank">
-                          <i class="fa fa-youtube"></i>
-                       </a>
-                       <a href="<?php the_field('instagram_url', 'option'); ?>" target="blank">
-                          <i class="fa fa-instagram"></i>
-                       </a>
-                    </p>
-                 </div>
+                        <h3>Thông Tin Liên Hệ</h3>
+                        <p><label for="">Điện thoại:</label> <a href="tel:<?php echo get_field('dien_thoai', 'option') ?>"><?php echo get_field('dien_thoai', 'option') ?></a></p>
+                        <p><label for="">Email:</label> <a href="mailto:<?php echo get_field('email', 'option') ?>"><?php echo get_field('email', 'option') ?></a></p>
+                        <p><label for="">Địa chỉ:</label><?php echo get_field('address', 'option') ?></p>
+                        <p>
+                          <label for="">Follow Us </label>
+                          <a href="<?php the_field('facebook_url', 'option'); ?>" target="blank">
+                            <i class="fa fa-facebook-square "></i>
+                         </a>
+                         <a href="<?php the_field('youtube_url', 'option'); ?>" target="blank">
+                            <i class="fa fa-youtube"></i>
+                         </a>
+                         <a href="<?php the_field('instagram_url', 'option'); ?>" target="blank">
+                            <i class="fa fa-instagram"></i>
+                         </a>
+                        </p>
+                     </div>
               </div>
               <div class="col-lg-6 map-ct">
                  <div class="form-ct">
-                    <h3>Form Liên Hệ</h3>
+                    <h3>Hãy liên hệ với chúng tôi</h3>
                     <?php echo do_shortcode( '[contact-form-7 id="262" title="Liên hệ"]' ); ?>
                  </div>
               </div>

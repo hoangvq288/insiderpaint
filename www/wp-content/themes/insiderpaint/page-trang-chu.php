@@ -18,45 +18,32 @@ get_header(); ?>
 
 <?php get_template_part( 'banner_homepage', get_post_format() ); ?>
 <div class="main-content">
-  
   <section class="service">
-    <div class="container">
-      <ul class="row">
-        <li class="service__list col-lg-3 col-md-6 col-12">
-          <div class="service__img">
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_sevice_1.jpg" alt="">
-          </div>
-          <div class="service__title">
-            Colorimetria
-          </div>
-        </li>
-        <li class="service__list col-lg-3 col-md-6 col-12">
-          <div class="service__img">
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_sevice_2.jpg" alt="">
-          </div>
-          <div class="service__title">
-            Marketing e<br>Merchandising
-          </div>
-        </li>
-        <li class="service__list col-lg-3 col-md-6 col-12">
-          <div class="service__img">
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_sevice_3.jpg" alt="">
-          </div>
-          <div class="service__title">
-            Marketing e<br>Merchandising
-          </div>
-        </li>
-        <li class="service__list col-lg-3 col-md-6 col-12">
-          <div class="service__img">
-            <img src="<?php echo get_bloginfo('template_directory'); ?>/images/img_sevice_4.jpg" alt="">
-          </div>
-          <div class="service__title">
-            Webmarketing
-          </div>
-        </li>
-      </ul>
-    </div>
-  </section>
+        <div class="container">
+          <ul class="row">
+            <li class="col-lg-3 col-md-6 col-12 service-list">
+              <span><i class="icofont icofont-dart"></i></span>
+              <h5>Contrary to popular belief</h5>
+              
+            </li>
+            <li class="col-lg-3 col-md-6 col-12 service-list">
+              <span><i class="icofont icofont-triangle"></i></span>
+              <h5>Contrary to popular belief</h5>
+              
+            </li>
+            <li class="col-lg-3 col-md-6 col-12 service-list">
+              <span><i class="icofont icofont-shield-alt"></i></span>
+              <h5>Contrary to popular belief</h5>
+              
+            </li>
+            <li class="col-lg-3 col-md-6 col-12 service-list">
+              <span><i class="icofont icofont-deal"></i></span>
+              <h5>Contrary to popular belief</h5>
+              
+            </li>
+          </ul>
+        </div>
+      </section>
   
   
   <section class="companyinfo">

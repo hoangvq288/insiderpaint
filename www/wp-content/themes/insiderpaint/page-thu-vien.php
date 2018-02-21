@@ -22,7 +22,7 @@ get_header(); ?>
         <?php
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
           $the_query = new WP_Query(array(
-            'post_type' => 'thu-vien-tai-lieu',
+            'post_type' => 'wpdmpro',
             'post_status' => 'publish',
             'posts_per_page' => $ITEMS_PER_PAGE_FOR_LIBRARY,
             'paged' => $paged,
@@ -34,22 +34,25 @@ get_header(); ?>
            while ($the_query->have_posts()) {
                  $the_query->the_post();
         ?>
-          <li class="product__list col-lg-4 col-12">
+          <li class="product__list col-lg-3 col-12">
             <div class="product__listct">
               <div class="product__img">
-                  <img src="<?php echo get_field('hinh_dai_dien') ?>" alt="" height="172px">
+                  <?php $post_image_url = get_the_post_thumbnail_url(get_the_ID()); ?>
+                  <?php $image_url = $post_image_url ? $post_image_url :  (get_bloginfo('template_directory').'/images/img_blog_1.jpg') ?>
+                  <img src="<?php echo $image_url ?>" alt=""> 
                 </div>
                 <div class="product__des">
-                  <h4><?php the_title(); ?></h4>
-                  <p style="min-height:88px" class="text-justify">
-                    <?php echo wp_trim_words(get_field('mo_ta'), 45, '...'); ?>
-                  </p>
-                  <a href="<?php the_field('file') ?>" class="btn btn-primary">
-                    Download
-                  </a>
+                  
+                  <div style="min-height: 88px" class="text-justify">
+                    <?php echo wp_trim_words(get_the_content(), 20, '...'); ?>
+                    <?php echo do_shortcode("[wpdm_package id='346']"); ?>
+                  </div>
+
                 </div>
             </div>
           </li>
+
+
         <?php } wp_reset_postdata(); ?>
         <?php
           kriesi_pagination($the_query->max_num_pages);

@@ -29,7 +29,11 @@ jQuery.noConflict();
 			// Example function
 			banner_slider : function() {
 				//console.log('hello world');
-				$('.bxslider').bxSlider();
+
+				$(window).load(function() {
+				 // executes when complete page is fully loaded, including all frames, objects and images
+					$('.bxslider').bxSlider();
+				});
 				$('.bxslider_client').bxSlider({
 					minSlides: "1",
 					maxSlides: "5",

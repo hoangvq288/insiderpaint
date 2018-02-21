@@ -39,13 +39,19 @@ get_header(); ?>
       </a>
       </li>
       <li>
-        <a href="#">Văn phòng</a>
+        <a href="<?php echo get_permalink(get_page_by_path('mau-son-tao-cam-hung/van-phong')->ID); ?>" class="nav__link">
+        Văn phòng
+        </a>
       </li>
       <li>
-        <a href="#">Khách sạn & Resort</a>
+        <a href="<?php echo get_permalink(get_page_by_path('mau-son-tao-cam-hung/khach-san-resort')->ID); ?>" class="nav__link">
+        Khách sạn & Resort
+        </a>
       </li>
       <li>
-        <a href="#">Khác</a>
+        <a href="<?php echo get_permalink(get_page_by_path('mau-son-tao-cam-hung/khac')->ID); ?>" class="nav__link">
+        Khác
+        </a>
       </li>
     </ul>
   </div>

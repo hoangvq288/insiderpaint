@@ -8,14 +8,25 @@
  */
 
 get_header(); ?>
-
-<section class="banner banner__news">
-  <div class="banner__slider">
-    <?php $post_image_url = get_the_post_thumbnail_url(get_the_ID()); ?>
-    <?php $image_url = $post_image_url ? $post_image_url :  (get_bloginfo('template_directory').'/images/img_banner_project_2.jpg') ?>
-    <img src="<?php echo $post_image_url ?>" alt="">
-  </div>
-</section>
+<?php
+    // query for the about page
+    $your_query = new WP_Query( 'pagename=tin-tuc-su-kien' );
+    // "loop" through query (even though it's just one page) 
+    while ( $your_query->have_posts() ) : $your_query->the_post();
+    ?>
+    <section class="banner banner__news">
+      <h2 class="title title__line">
+        Tin tức sự kiện
+      </h2>
+      <div class="banner-one">
+        <img src="<?php the_field('banner'); ?>" alt="">
+      </div>
+    </section>
+    <?php
+    endwhile;
+    // reset post data (important!)
+    wp_reset_postdata();
+?>
 <div class="main-content">
   <div class="blog-content">
      <div class="container">

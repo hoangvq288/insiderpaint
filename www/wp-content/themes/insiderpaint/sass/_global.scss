@@ -307,32 +307,37 @@ body{
             color: $main-color-primary;
           }
         }
-        +.status{
-          color: white;
-          display: block;
-          position: absolute;
-          color: white;
-          top: 8px;
-          right: 10px;
-          width: 45px;
-          height: 45px;
-          z-index: 1001;
-          &:before{
-            content: "";
-            font-family: 'FontAwesome';
+        + a{
+          +.status{
+            color: white;
             display: block;
-            font-size: 18px;
-            margin-left: 20px;
+            position: absolute;
+            color: white;
+            top: 8px;
+            right: 10px;
+            width: 45px;
+            height: 45px;
+            z-index: 1001;
+            &:before{
+              content: "";
+              font-family: 'FontAwesome';
+              display: block;
+              font-size: 18px;
+              margin-left: 20px;
+            }
           }
         }
         &:checked{
-          +.status{
-            &:before{
-              content: "";
-            }
-            + ul{
-              display: block;
-              background: #ba9745;
+          + a{
+            background: #806d40;
+            +.status{
+              &:before{
+                content: "";
+              }
+              + ul{
+                display: block;
+                background: #ba9745;
+              }
             }
           }
         }
@@ -638,10 +643,15 @@ footer{
     &__social{
       padding-top: 30px;
       a{
-        color: white;
+        color: #333;
         display: inline-block;
         margin-left: 15px;
         margin-right: 15px;
+        &:hover{
+          i{
+            color: $main-color-primary;
+          }
+        }
         i{
           font-size: 30px;
         }
@@ -843,8 +853,20 @@ footer{
 }
 
 
+.no-banner{
+  margin-top: 35px;
+}
 
-
+.featured-article{
+  &.no-banner{
+    .title-main{
+      h2{
+        margin-top: 30px;
+        font-size: 24px;
+      }
+    }
+  }
+}
 
 
 /*modal*/

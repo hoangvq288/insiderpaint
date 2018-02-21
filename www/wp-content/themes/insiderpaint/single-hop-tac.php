@@ -8,6 +8,26 @@
  */
 
 get_header(); ?>
+<?php
+    // query for the about page
+    $your_query = new WP_Query( 'pagename=co-hoi-hop-tac' );
+    // "loop" through query (even though it's just one page) 
+    while ( $your_query->have_posts() ) : $your_query->the_post();
+    ?>
+    <section class="banner banner__news">
+      <h2 class="title title__line">
+        Hợp tác
+      </h2>
+      <div class="banner-one">
+        <img src="<?php the_field('banner'); ?>" alt="">
+      </div>
+    </section>
+    <?php
+    endwhile;
+    // reset post data (important!)
+    wp_reset_postdata();
+?>
+
 <div class="main-content">
 <div class="blog-content">
    <div class="container">
